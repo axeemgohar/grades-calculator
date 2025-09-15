@@ -1,32 +1,10 @@
-import Image from 'next/image';
-import CGPAContent from './grade-calculator/cgpa/components/CGPAContent';
-import RelatedLinks from '@/utils/RelatedLinks';
-import CGPACalculator from './grade-calculator/cgpa/components/CGPACalculator';
+import { Link as LinkIcon } from 'lucide-react';
 import Link from 'next/link';
-import { LinkIcon } from 'lucide-react';
 
-export default function Home() {
+const CalculatorLayout = ({ children }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
-      <div className="lg:col-span-2">
-        <section className="bg-white rounded-lg md:shadow-xs p-0 md:p-8 md:border">
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-4 md:mb-6 flex items-center bg-gradient-to-b from-indigo-500 to-indigo-700 bg-clip-text text-transparent">
-            CGPA Calculator
-          </h1>
-          <h2 className="text-lg md:text-xl font-bold text-slate-800 mb-1">
-            Enter Your Semester GPA & Credits
-          </h2>
-          <p className="text-slate-600 mb-8">Add each semester GPA & credits</p>
-
-          <CGPACalculator />
-        </section>
-        <RelatedLinks />
-
-        {/* Info Section */}
-        <div className="bg-white mt-8">
-          <CGPAContent />
-        </div>
-      </div>
+      {children}
       <aside className="mt-10 lg:mt-0 order-1 max-lg:hidden">
         <div className="sticky top-6 space-y-8">
           <div className="bg-indigo-50 rounded-lg p-6 border border-indigo-200">
@@ -63,8 +41,17 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          {/* <div className="w-full min-h-[600px] bg-slate-200 rounded-lg flex items-center justify-center border-2 border-dashed border-slate-300">
+            <span className="text-slate-500 font-medium text-center p-4">
+              Sidebar Ad
+              <br />
+              (e.g., 300x250, 300x600)
+            </span>
+          </div> */}
         </div>
       </aside>
     </div>
   );
-}
+};
+
+export default CalculatorLayout;
