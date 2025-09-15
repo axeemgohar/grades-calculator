@@ -4,7 +4,7 @@ import Link from 'next/link';
 const RelatedLinks = () => {
   return (
     <aside className="mt-10 lg:mt-0 lg:hidden">
-      <div className="space-y-8">
+      <div className="mb-8">
         <div className="bg-indigo-50 rounded-lg p-6 border border-indigo-200">
           <h4 className="font-bold text-lg text-indigo-900 mb-2">
             Related Calculators
@@ -40,6 +40,7 @@ const RelatedLinks = () => {
           </ul>
         </div>
       </div>
+      <div id="ezoic-pub-ad-placeholder-104"></div>
     </aside>
   );
 };

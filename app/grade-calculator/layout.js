@@ -41,13 +41,7 @@ const CalculatorLayout = ({ children }) => {
               </li>
             </ul>
           </div>
-          {/* <div className="w-full min-h-[600px] bg-slate-200 rounded-lg flex items-center justify-center border-2 border-dashed border-slate-300">
-            <span className="text-slate-500 font-medium text-center p-4">
-              Sidebar Ad
-              <br />
-              (e.g., 300x250, 300x600)
-            </span>
-          </div> */}
+          <div id="ezoic-pub-ad-placeholder-114"></div>
         </div>
       </aside>
     </div>

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
       <div className="lg:col-span-2">
-        <section className="bg-white rounded-lg md:shadow-xs p-0 md:p-8 md:border">
+        <section className="bg-white rounded-lg md:shadow-xs p-0 md:p-8 md:border mb-8">
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4 md:mb-6 flex items-center bg-gradient-to-b from-indigo-500 to-indigo-700 bg-clip-text text-transparent">
             CGPA Calculator
           </h1>
@@ -20,6 +20,9 @@ export default function Home() {
 
           <CGPACalculator />
         </section>
+        <div>
+          <div id="ezoic-pub-ad-placeholder-115"></div>
+        </div>
         <RelatedLinks />
 
         {/* Info Section */}
