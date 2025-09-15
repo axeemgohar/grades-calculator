@@ -54,6 +54,7 @@ export default function Footer() {
                 {calculatorLinks.map((link) => (
                   <li key={link.href}>
                     <Link
+                      prefetch={false}
                       href={link.href}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
@@ -73,6 +74,7 @@ export default function Footer() {
                 {companyLinks.map((link) => (
                   <li key={link.href}>
                     <Link
+                      prefetch={false}
                       href={link.href}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >

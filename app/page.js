@@ -63,6 +63,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          <div id="ezoic-pub-ad-placeholder-114"></div>
         </div>
       </aside>
     </div>

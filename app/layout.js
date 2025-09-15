@@ -6,6 +6,7 @@ import Footer from '@/components/ui/Footer';
 import Link from 'next/link';
 import { LinkIcon } from 'lucide-react';
 import { GoogleTagManager } from '@next/third-parties/google';
+import EzoicScripts from '@/ezoic/EzoicInit';
 
 const robotoSans = Roboto({
   variable: '--font-roboto',
@@ -32,10 +33,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${robotoSans.variable} font-sans antialiased`}>
         <Header />
-        <Toaster />
-        {/* <GoogleTagManager gtmId="GTM-MPPN39V" /> */}
 
-        <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10">
+        <Toaster />
+        <GoogleTagManager gtmId="GTM-MPPN39V" />
+        <EzoicScripts />
+
+        <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6">
           {children}
         </main>
 

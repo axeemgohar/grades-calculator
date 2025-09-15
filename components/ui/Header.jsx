@@ -50,7 +50,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full border-b bg-white">
+    <header className="w-full border-b bg-white mb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -108,12 +108,13 @@ const Header = () => {
                 {/* Static Pages */}
                 {staticPages.map((item) => (
                   <NavigationMenuItem key={item.label}>
-                    <NavigationMenuLink
+                    <Link
+                      prefetch={false}
                       href={item.href}
-                      className="text-base text-gray-900 hover:text-indigo-600 hover:bg-indigo-50 mr-2 font-medium"
+                      className="p-2 rounded-sm text-base text-gray-900 hover:text-indigo-600 hover:bg-indigo-50 mr-2 font-medium"
                     >
                       {item.label}
-                    </NavigationMenuLink>
+                    </Link>
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
