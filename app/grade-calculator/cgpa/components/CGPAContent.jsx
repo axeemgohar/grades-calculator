@@ -146,8 +146,14 @@ const CGPAContent = () => {
           </ul>
         </div>
       </section>
+      {/* Mobile Version */}
       <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-117"></div>
+      </div>
+
+      {/* Desktop Version */}
+      <div className="max-lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-120"></div>
       </div>
 
       {/* <!-- Credits Section --> */}
@@ -305,8 +311,14 @@ const CGPAContent = () => {
           </article>
         </div>
       </section>
+      {/* Mobile Version */}
       <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-118"></div>
+      </div>
+
+      {/* Desktop Version */}
+      <div className="max-lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-121"></div>
       </div>
 
       {/* <!-- Tips Section --> */}
@@ -440,8 +452,15 @@ const CGPAContent = () => {
           </dl>
         </div>
       </section>
+      {/* Mobile Version */}
+
       <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-119"></div>
+      </div>
+
+      {/* Desktop Version */}
+      <div className="max-lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-122"></div>
       </div>
 
       {/* <!-- Call to Action --> */}

@@ -40,7 +40,11 @@ const RelatedLinks = () => {
           </ul>
         </div>
       </div>
-      <div id="ezoic-pub-ad-placeholder-104"></div>
+
+      <div
+        id="ezoic-pub-ad-placeholder-115"
+        className=" border border-solid bg-indigo-800 w-[320px] h-[100px] border-gray-800 mx-auto"
+      ></div>
     </aside>
   );
 };
