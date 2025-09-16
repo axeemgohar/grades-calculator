@@ -1,6 +1,7 @@
 import RelatedLinks from '@/utils/RelatedLinks';
 import CGPAPercentageCalculator from './components/CGPAPercentageCalculator';
 import CGPAPercentageContent from './components/CGPAPercentageContent';
+import CGPAPercentageCalculatorSchema from '@/JSON-LD Schemas/CGPAPercentageSchema';
 
 export const metadata = {
   title: 'Simple CGPA to Percentage Calculator',
@@ -30,6 +31,7 @@ const USA = () => {
       <div className="bg-white mt-8">
         <CGPAPercentageContent />
       </div>
+      <CGPAPercentageCalculatorSchema />
     </div>
   );
 };

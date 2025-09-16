@@ -1,6 +1,7 @@
 import RelatedLinks from '@/utils/RelatedLinks';
 import UKContent from './components/UKContent';
 import UKDCCalculator from './components/UKGPACalculator';
+import UKDegreeCalculatorSchema from '@/JSON-LD Schemas/UKDCCalculatorSchema';
 
 export const metadata = {
   title: 'Simple UK Degree Calculator',
@@ -31,6 +32,7 @@ const USA = () => {
       <div className="bg-white mt-8">
         <UKContent />
       </div>
+      <UKDegreeCalculatorSchema />
     </div>
   );
 };

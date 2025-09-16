@@ -4,6 +4,7 @@ import RelatedLinks from '@/utils/RelatedLinks';
 import CGPACalculator from './grade-calculator/cgpa/components/CGPACalculator';
 import Link from 'next/link';
 import { LinkIcon } from 'lucide-react';
+import CGPACalculatorSchema from '@/JSON-LD Schemas/CGPACalculatorSchema';
 
 export default function Home() {
   return (
@@ -71,6 +72,7 @@ export default function Home() {
           <div id="ezoic-pub-ad-placeholder-114"></div>
         </div>
       </aside>
+      <CGPACalculatorSchema />
     </div>
   );
 }

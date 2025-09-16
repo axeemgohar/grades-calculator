@@ -1,6 +1,7 @@
 import USAGPACalculator from './components/USAGPACalculator';
 import USAContent from './components/USAContent';
 import RelatedLinks from '@/utils/RelatedLinks';
+import USGPACalculatorSchema from '@/JSON-LD Schemas/USGPACalculatorSchema';
 
 export const metadata = {
   title: 'Simple US GPA Calculator',
@@ -31,6 +32,7 @@ const USA = () => {
       <div className="bg-white mt-8">
         <USAContent />
       </div>
+      <USGPACalculatorSchema />
     </div>
   );
 };
