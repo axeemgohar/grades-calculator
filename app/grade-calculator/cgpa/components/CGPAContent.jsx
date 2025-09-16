@@ -452,8 +452,8 @@ const CGPAContent = () => {
           </dl>
         </div>
       </section>
-      {/* Mobile Version */}
 
+      {/* Mobile Version */}
       <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-119"></div>
       </div>

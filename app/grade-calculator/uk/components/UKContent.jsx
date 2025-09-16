@@ -172,6 +172,16 @@ const UKContent = () => {
         </p>
       </section>
 
+      {/* Mobile Version */}
+      <div className="lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-117"></div>
+      </div>
+
+      {/* Desktop Version */}
+      <div className="max-lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-120"></div>
+      </div>
+
       {/* <!-- Credits Section --> */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -371,6 +381,16 @@ const UKContent = () => {
         </aside>
       </section>
 
+      {/* Mobile Version */}
+      <div className="lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-118"></div>
+      </div>
+
+      {/* Desktop Version */}
+      <div className="max-lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-121"></div>
+      </div>
+
       {/* <!-- Why GPA Matters --> */}
       <section className="bg-indigo-50 rounded-lg border border-indigo-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -473,7 +493,7 @@ const UKContent = () => {
       </section>
 
       {/* <!-- FAQ Section --> */}
-      <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8">
+      <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
           <CircleQuestionMark className="text-indigo-600 mr-3  shrink-0" />
           Frequently Asked Questions
@@ -581,9 +601,18 @@ const UKContent = () => {
           </dl>
         </div>
       </section>
+      {/* Mobile Version */}
+      <div className="lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-119"></div>
+      </div>
+
+      {/* Desktop Version */}
+      <div className="max-lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-122"></div>
+      </div>
 
       {/* <!-- Call to Action --> */}
-      <div className="text-center mt-8 p-6 bg-primary rounded-lg text-white">
+      <div className="text-center p-6 bg-primary rounded-lg text-white">
         <h3 className="text-xl font-bold mb-2">
           Ready to calculate your degree classification?
         </h3>
