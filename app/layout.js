@@ -3,8 +3,6 @@ import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 import { Roboto } from 'next/font/google';
 import Footer from '@/components/ui/Footer';
-import Link from 'next/link';
-import { LinkIcon } from 'lucide-react';
 import { GoogleTagManager } from '@next/third-parties/google';
 import EzoicScripts from '@/ezoic/EzoicInit';
 
@@ -35,8 +33,8 @@ export default function RootLayout({ children }) {
         <Header />
 
         <Toaster position="top-right" />
-        <GoogleTagManager gtmId="GTM-MPPN39V" />
-        <EzoicScripts />
+        {/* <GoogleTagManager gtmId="GTM-MPPN39V" />
+        <EzoicScripts /> */}
 
         <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6">
           {children}

@@ -19,7 +19,7 @@ import { useState } from 'react';
 import { cgpaPercentageSchema } from '@/lib/validationSchemas';
 import { toast } from 'sonner';
 import DisplayResult from './DisplayResult';
-import Lottie from 'lottie-react';
+import Lottie from 'react-lottie-player/dist/LottiePlayerLight';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 
 const CGPAPercentageCalculator = () => {
@@ -245,7 +245,7 @@ const CGPAPercentageCalculator = () => {
       ) : result.score && loader ? (
         <Lottie
           animationData={printerLoader}
-          autoPlay={true}
+          play
           loop={false}
           className="h-72 max-md:h-64 max-sm:h-60"
         />

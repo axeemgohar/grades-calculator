@@ -8,7 +8,7 @@ import { moduleListSchemaUK } from '@/lib/validationSchemas';
 import { toast } from 'sonner';
 import DisplayResult from './DisplayResult';
 import useElementSize from '@/utils/useElementSize';
-import Lottie from 'lottie-react';
+import Lottie from 'react-lottie-player/dist/LottiePlayerLight';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 import { calculateDegreeClassification } from '@/lib/calculations/uk-degree';
 
@@ -215,7 +215,7 @@ const UKDCCalculator = () => {
       ) : degreeClassification.score && loader ? (
         <Lottie
           animationData={printerLoader}
-          autoPlay={true}
+          play
           loop={false}
           className="h-72 max-md:h-64 max-sm:h-60"
         />
