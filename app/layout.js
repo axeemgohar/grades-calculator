@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
       <body className={`${robotoSans.variable} font-sans antialiased`}>
         <Header />
 
-        <Toaster />
+        <Toaster position="top-right" />
         <GoogleTagManager gtmId="GTM-MPPN39V" />
         <EzoicScripts />
 

@@ -4,6 +4,7 @@ import RelatedLinks from '@/utils/RelatedLinks';
 import CGPACalculator from './grade-calculator/cgpa/components/CGPACalculator';
 import Link from 'next/link';
 import { LinkIcon } from 'lucide-react';
+import AddSemesterButton from '@/lib/ButtonEffect';
 
 export default function Home() {
   return (
@@ -66,6 +67,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          <AddSemesterButton />
           <div id="ezoic-pub-ad-placeholder-114"></div>
         </div>
       </aside>

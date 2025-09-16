@@ -146,3 +146,20 @@
   background: ;
   color: #fff !important;
 } */
+
+.breathing {
+  animation: gentle-breathe 2s ease-in-out 2; /* 2 cycles = 4s */
+  animation-delay: 5s; /* start after 5s */
+  animation-fill-mode: forwards; /* keep last state after stopping */
+  will-change: auto;
+}
+
+@keyframes gentle-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

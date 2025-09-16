@@ -12,7 +12,7 @@ import Lottie from 'lottie-react';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 import CountrySelector from '../../us/components/CGPAGuider';
 
-const semesterList = Array.from({ length: 5 }, (_, i) => ({
+const semesterList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
   gpa: '',
   credits: '',
@@ -182,7 +182,7 @@ const CGPACalculator = () => {
             <div className="mt-6 flex gap-x-4 md:flex-row flex-col">
               <div className="flex gap-x-4 mb-4 max-md:gap-x-6">
                 <Button
-                  className="text-primary border-primary text-sm hover:bg-indigo-50 hover:text-indigo-600 max-md:flex-1"
+                  className="text-primary border-primary text-sm hover:bg-indigo-50 hover:text-indigo-600 max-md:flex-1 breathing"
                   variant="outline"
                   onClick={addSemester}
                   type="button"

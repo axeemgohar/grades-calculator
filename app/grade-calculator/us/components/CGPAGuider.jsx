@@ -44,8 +44,12 @@ const CountrySelector = () => {
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-full justify-between h-full mb-4 text-gray-800 border-indigo-500/50 border  hover:bg-gray-50"
+              className="w-full justify-between h-full mb-4 text-gray-800 border-indigo-500/50 border  hover:bg-gray-50 relative"
             >
+              <span className="flex size-3 absolute -left-1 -top-1">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-indigo-500"></span>
+              </span>
               {value ? (
                 <span className="flex items-center gap-2 truncate">
                   {selectedCountry.label}
