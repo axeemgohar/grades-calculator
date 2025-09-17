@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { getGPADescription } from '@/lib/calculations/usa-gpa';
+import ShareResult from '@/utils/ShareResult';
+
 import { RotateCcw } from 'lucide-react';
 
 const DisplayResult = ({ gpa, onRecalculate }) => {
@@ -38,11 +39,12 @@ const DisplayResult = ({ gpa, onRecalculate }) => {
           </div>
         </div>
       </output>
-      <div className="text-center ">
-        <Button className="mt-6   !px-12 h-10" onClick={onRecalculate}>
+      <div className="text-center flex mt-6 sm:gap-6 justify-center max-sm:flex-col gap-4 ">
+        <Button className=" !px-12 h-10" onClick={onRecalculate}>
           <RotateCcw className="text-white" size={20} strokeWidth={2.5} />
           Calculate Again
         </Button>
+        <ShareResult gpa={gpa} />
       </div>
     </>
   );
