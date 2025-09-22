@@ -15,7 +15,7 @@ const robotoSans = Roboto({
 export const metadata = {
   title: 'Simple CGPA Calculator',
   description:
-    "Easily calculate your CGPA online with our simple CGPA calculator. You just have to select the number of semesters, enter your GPA, click on the 'calculate' button, and we will do the rest.",
+    "Easily calculate your overall GPA with our simple CGPA calculator. You just have to select the number of semesters, enter your GPA, click on the 'calculate' button, and we will do the rest.",
   alternates: {
     canonical: 'https://calculatecgpa.com',
   },

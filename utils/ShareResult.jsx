@@ -71,7 +71,7 @@ const ShareResult = ({ gpa }) => {
             {/* Header */}
             <div className="text-center mb-8">
               <h1 className="text-2xl font-bold text-indigo-900 mb-6">
-                My CGPA Result
+                {gpa.CGPADescription}
               </h1>
               <div className="bg-white border border-indigo-300 rounded-lg p-8">
                 <div className="text-6xl font-bold text-indigo-600 mb-2">
@@ -84,7 +84,7 @@ const ShareResult = ({ gpa }) => {
             <div className="space-y-6 mb-8">
               <div className="flex justify-between items-center py-4 border-b border-indigo-300">
                 <span className="text-lg font-medium text-indigo-900">
-                  Total Semesters
+                  {gpa.semesterTerm}
                 </span>
                 <span className="text-2xl font-bold text-indigo-600">
                   {gpa.totalSemesters}
@@ -92,7 +92,7 @@ const ShareResult = ({ gpa }) => {
               </div>
               <div className="flex justify-between items-center py-4 border-b border-indigo-300">
                 <span className="text-lg font-medium text-indigo-900">
-                  Total Credits
+                  {gpa.creditsTerm}
                 </span>
                 <span className="text-2xl font-bold text-indigo-600">
                   {gpa.totalCredits}

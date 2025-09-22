@@ -11,6 +11,7 @@ import useElementSize from '@/utils/useElementSize';
 import Lottie from 'react-lottie-player/dist/LottiePlayerLight';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 import CountrySelector from '../../us/components/CGPAGuider';
+import useLocationBasedTerms from '@/utils/useLocationBasedTerms';
 
 const semesterList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
@@ -25,7 +26,19 @@ const CGPACalculator = () => {
     score: 0,
     totalSemesters: 0,
     totalCredits: 0,
+    CGPADescription: '',
+    semesterTerm: '',
+    creditsTerm: '',
   });
+
+  // Location-based terms hook
+  const {
+    currentTerms,
+    showExample,
+    selectedCountry,
+    handleCountrySelect,
+    getCurrentExample,
+  } = useLocationBasedTerms();
 
   const { ref, height } = useElementSize(); // Custom Hook to calculate height
 
@@ -80,6 +93,9 @@ const CGPACalculator = () => {
         (acc, sem) => acc + (parseFloat(sem.credits) || 0),
         0
       ),
+      CGPADescription: currentTerms.resultCGPA,
+      semesterTerm: currentTerms.resultTotalSemesters,
+      creditsTerm: currentTerms.resultTotalCredits,
     });
     setLoader(true);
     window.scrollTo({
@@ -96,6 +112,9 @@ const CGPACalculator = () => {
       score: 0,
       totalSemesters: 0,
       totalCredits: 0,
+      CGPADescription: '',
+      semesterTerm: '',
+      creditsTerm: '',
     });
   };
 
@@ -103,15 +122,22 @@ const CGPACalculator = () => {
     <>
       {!cgpa.score && !loader ? (
         <>
-          <CountrySelector />
+          <CountrySelector
+            selectedCountry={selectedCountry}
+            onCountrySelect={handleCountrySelect}
+            showExample={showExample}
+            currentExample={getCurrentExample()}
+          />
           <form onSubmit={calculateCurrentCGPA}>
             <div className="grid border border-indigo-500/50 bg-indigo-300/10 grid-cols-12 rounded-t items-center">
               <div className="col-span-6 py-4 ps-3">
-                <h4 className="font-semibold text-slate-700">Semester GPA</h4>
+                <h4 className="font-semibold text-slate-700">
+                  {currentTerms.semesterGPA}
+                </h4>
               </div>
               <div className="col-span-6 py-4 border-0 border-l border-indigo-500/50 ps-3">
                 <h4 className="font-semibold text-slate-700">
-                  Semester Credits
+                  {currentTerms.semesterCredits}
                 </h4>
               </div>
             </div>
@@ -135,7 +161,10 @@ const CGPACalculator = () => {
                           htmlFor={'semester-gpa-' + semester.id}
                           className="sr-only"
                         >
-                          Semester {semester.id} GPA
+                          {currentTerms.placeholderGPA.replace(
+                            '{{n}}',
+                            semester.id
+                          )}
                         </label>
                         <Input
                           type="number"
@@ -144,7 +173,10 @@ const CGPACalculator = () => {
                           onChange={(e) =>
                             updateSemester(semester.id, 'gpa', e.target.value)
                           }
-                          placeholder={`Semester ${semester.id} GPA`}
+                          placeholder={currentTerms.placeholderGPA.replace(
+                            '{{n}}',
+                            semester.id
+                          )}
                           step="0.01"
                           min="0"
                           className="py-3.5"
@@ -155,7 +187,10 @@ const CGPACalculator = () => {
                           htmlFor={'semester-credits-' + semester.id}
                           className="sr-only"
                         >
-                          Semester {semester.id} Credits
+                          {currentTerms.placeholderCredits.replace(
+                            '{{n}}',
+                            semester.id
+                          )}
                         </label>
                         <Input
                           type="number"
@@ -168,7 +203,10 @@ const CGPACalculator = () => {
                           }
                           id={'semester-credits-' + semester.id}
                           value={semester.credits}
-                          placeholder={`Semester ${semester.id} Credits`}
+                          placeholder={currentTerms.placeholderCredits.replace(
+                            '{{n}}',
+                            semester.id
+                          )}
                           min="0"
                           step="1"
                           className="py-3.5"
@@ -187,7 +225,7 @@ const CGPACalculator = () => {
                   onClick={addSemester}
                   type="button"
                 >
-                  Add Semester
+                  {currentTerms.addSemester}
                   <PlusSquare />
                 </Button>
                 <Button
@@ -197,11 +235,11 @@ const CGPACalculator = () => {
                   onClick={removeSemester}
                   disabled={semesters.length <= 1}
                 >
-                  Delete Semester <Trash2 />
+                  {currentTerms.deleteSemester} <Trash2 />
                 </Button>
               </div>
               <Button className="flex-1" type="submit">
-                Calculate CGPA
+                {currentTerms.calculateCGPA}
               </Button>
             </div>
           </form>

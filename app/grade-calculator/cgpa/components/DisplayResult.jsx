@@ -13,7 +13,7 @@ const DisplayResult = ({ gpa, onRecalculate }) => {
         <div className="flex md:flex-row items-center justify-between gap-4">
           <div>
             <h3 className="text-lg md:text-xl font-bold text-indigo-900 mb-4">
-              Your CGPA Result
+              {gpa.CGPADescription}
             </h3>
             <div className={`text-3xl md:text-4xl font-bold text-indigo-600`}>
               {gpa.score}{' '}
@@ -22,7 +22,7 @@ const DisplayResult = ({ gpa, onRecalculate }) => {
           <div className="space-y-3">
             <div>
               <p className="text-sm font-medium text-indigo-900">
-                Total Semesters:
+                {gpa.semesterTerm}:
               </p>
               <span className="font-bold text-indigo-600 md:text-[26px] text-2xl">
                 {gpa.totalSemesters}
@@ -30,7 +30,7 @@ const DisplayResult = ({ gpa, onRecalculate }) => {
             </div>
             <div>
               <p className="text-sm font-medium text-indigo-900">
-                Total Credits:
+                {gpa.creditsTerm}:
               </p>
               <span className="font-bold text-indigo-600 md:text-[26px] text-2xl">
                 {gpa.totalCredits}

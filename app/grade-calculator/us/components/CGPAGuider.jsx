@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Check, ChevronsUpDown, Globe, Info } from 'lucide-react';
+import { Check, ChevronsUpDown, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
@@ -16,24 +16,34 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { countriesData } from '@/utils/countryData';
+import { countryData } from '@/utils/countryData';
 
-const CountrySelector = () => {
+const CountrySelector = ({
+  selectedCountry,
+  onCountrySelect,
+  showExample,
+  currentExample,
+}) => {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState('');
 
-  // Sort countries alphabetically and prepare for combobox
-  const sortedCountries = countriesData
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .map((country) => ({
-      value: country.name.toLowerCase().replace(/\s+/g, '-'),
-      label: country.name,
-      data: country,
-    }));
+  // Convert countryData to array format for the selector
+  const sortedCountries = Object.keys(countryData)
+    .map((countryName) => ({
+      value: countryName.toLowerCase().replace(/\s+/g, '-'),
+      label: countryName,
+      name: countryName,
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
 
-  const selectedCountry = value
-    ? sortedCountries.find((country) => country.value === value)
+  const selectedCountryData = selectedCountry
+    ? sortedCountries.find((country) => country.name === selectedCountry)
     : null;
+
+  const handleSelect = (countryName) => {
+    const newSelection = countryName === selectedCountry ? '' : countryName;
+    onCountrySelect(newSelection);
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -44,15 +54,15 @@ const CountrySelector = () => {
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-full justify-between h-full mb-4 text-gray-800 border-indigo-500/50 border  hover:bg-gray-50 relative"
+              className="w-full justify-between h-full mb-4 text-gray-800 border-indigo-500/50 border hover:bg-gray-50 relative"
             >
               <span className="flex size-3 absolute -left-1 -top-1">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-400 opacity-75"></span>
                 <span className="relative inline-flex size-3 rounded-full bg-purple-500"></span>
               </span>
-              {value ? (
+              {selectedCountry ? (
                 <span className="flex items-center gap-2 truncate">
-                  {selectedCountry.label}
+                  {selectedCountry}
                 </span>
               ) : (
                 'Select your country...'
@@ -70,12 +80,7 @@ const CountrySelector = () => {
                     <CommandItem
                       key={country.value}
                       value={country.label}
-                      onSelect={(currentValue) => {
-                        const newValue = country.value;
-                        setValue(newValue === value ? '' : newValue);
-
-                        setOpen(false);
-                      }}
+                      onSelect={() => handleSelect(country.name)}
                     >
                       <div className="flex flex-col items-start flex-1">
                         <span>{country.label}</span>
@@ -83,7 +88,9 @@ const CountrySelector = () => {
                       <Check
                         className={cn(
                           'ml-auto h-4 w-4',
-                          value === country.value ? 'opacity-100' : 'opacity-0'
+                          selectedCountry === country.name
+                            ? 'opacity-100'
+                            : 'opacity-0'
                         )}
                       />
                     </CommandItem>
@@ -96,36 +103,44 @@ const CountrySelector = () => {
       </div>
 
       {/* Example Display */}
-      {selectedCountry && (
+      {showExample && currentExample && selectedCountry && (
         <div className="rounded-sm border border-purple-300 bg-purple-50 p-4 mb-4">
           <div className="flex items-center gap-2 mb-4">
             <Info strokeWidth={1.5} className="text-purple-700" />
-            {/* <div className="w-2 h-2 rounded-full bg-purple-500"></div> */}
             <h4 className="font-medium text-purple-900 text-base">
-              Usage example for {selectedCountry.label}:
+              Usage example for {selectedCountry}:
             </h4>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {selectedCountry.data.examples.map((example, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300"
-              >
-                <span className="text-sm text-gray-700 ">
-                  Semester {example.semester} GPA:{' '}
-                  <span className="font-semibold text-gray-600">
-                    {example.gpa}
-                  </span>
+            <div className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300">
+              <span className="text-sm text-gray-700 ">
+                Semester 1 GPA:{' '}
+                <span className="font-semibold text-gray-600">
+                  {currentExample.semester1.gpa}
                 </span>
-                <span className="text-gray-600 text-sm ">
-                  Credits:{' '}
-                  <span className="font-semibold text-gray-600">
-                    {example.credits}
-                  </span>
+              </span>
+              <span className="text-gray-600 text-sm ">
+                Credits:{' '}
+                <span className="font-semibold text-gray-600">
+                  {currentExample.semester1.credits}
                 </span>
-              </div>
-            ))}
+              </span>
+            </div>
+            <div className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300">
+              <span className="text-sm text-gray-700 ">
+                Semester 2 GPA:{' '}
+                <span className="font-semibold text-gray-600">
+                  {currentExample.semester2.gpa}
+                </span>
+              </span>
+              <span className="text-gray-600 text-sm ">
+                Credits:{' '}
+                <span className="font-semibold text-gray-600">
+                  {currentExample.semester2.credits}
+                </span>
+              </span>
+            </div>
           </div>
         </div>
       )}
