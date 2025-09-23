@@ -25,6 +25,7 @@ const CountrySelector = ({
   currentExample,
 }) => {
   const [open, setOpen] = useState(false);
+  console.log(currentExample);
 
   // Convert countryData to array format for the selector
   const sortedCountries = Object.keys(countryData)
@@ -115,13 +116,13 @@ const CountrySelector = ({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300">
               <span className="text-sm text-gray-700 ">
-                Semester 1 GPA:{' '}
+                {currentExample.semester1.GPATerm}:{' '}
                 <span className="font-semibold text-gray-600">
                   {currentExample.semester1.gpa}
                 </span>
               </span>
               <span className="text-gray-600 text-sm ">
-                Credits:{' '}
+                {currentExample.semester1.creditsTerm}:{' '}
                 <span className="font-semibold text-gray-600">
                   {currentExample.semester1.credits}
                 </span>
@@ -129,13 +130,13 @@ const CountrySelector = ({
             </div>
             <div className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300">
               <span className="text-sm text-gray-700 ">
-                Semester 2 GPA:{' '}
+                {currentExample.semester2.GPATerm}:{' '}
                 <span className="font-semibold text-gray-600">
                   {currentExample.semester2.gpa}
                 </span>
               </span>
               <span className="text-gray-600 text-sm ">
-                Credits:{' '}
+                {currentExample.semester2.creditsTerm}:{' '}
                 <span className="font-semibold text-gray-600">
                   {currentExample.semester2.credits}
                 </span>

@@ -15,8 +15,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.8, credits: 18 },
-      semester2: { gpa: 4.0, credits: 16 },
+      semester1: {
+        gpa: 3.8,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 4.0,
+        credits: 16,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
 
@@ -36,8 +46,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.65, credits: 18 },
-      semester2: { gpa: 3.9, credits: 20 },
+      semester1: {
+        gpa: 3.65,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.9,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
 
@@ -57,8 +77,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Units',
     },
     example: {
-      semester1: { gpa: 2.5, credits: 18 },
-      semester2: { gpa: 1.75, credits: 15 },
+      semester1: {
+        gpa: 2.5,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Units',
+      },
+      semester2: {
+        gpa: 1.75,
+        credits: 15,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Units',
+      },
     },
   },
 
@@ -78,8 +108,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.7, credits: 15 },
-      semester2: { gpa: 3.9, credits: 18 },
+      semester1: {
+        gpa: 3.7,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.9,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
 
@@ -87,7 +127,7 @@ export const countryData = {
     code: 'SG',
     name: 'Singapore',
     terms: {
-      semesterGPA: 'Semester GPA (out of 5.0)',
+      semesterGPA: 'Semester GPA',
       semesterCredits: 'Modular Credits (MCs)',
       calculateCGPA: 'Calculate CAP',
       addSemester: 'Add Semester',
@@ -99,8 +139,18 @@ export const countryData = {
       resultTotalCredits: 'Total Modular Credits',
     },
     example: {
-      semester1: { gpa: 4.2, credits: 20 },
-      semester2: { gpa: 4.5, credits: 20 },
+      semester1: {
+        gpa: 3.9,
+        credits: 20,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 4.1,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
 
@@ -120,8 +170,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 18 },
-      semester2: { gpa: 3.8, credits: 20 },
+      semester1: {
+        gpa: 3.5,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
 
@@ -141,8 +201,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 16 },
-      semester2: { gpa: 3.8, credits: 18 },
+      semester1: {
+        gpa: 3.5,
+        credits: 16,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   'United Kingdom': {
@@ -161,8 +231,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 68, credits: 60 },
-      semester2: { gpa: 72, credits: 60 },
+      semester1: {
+        gpa: 68,
+        credits: 60,
+        GPATerm: 'Semester 1 Percentage',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 72,
+        credits: 60,
+        GPATerm: 'Semester 2 Percentage',
+        creditsTerm: 'Credits',
+      },
     },
   },
   India: {
@@ -181,8 +261,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 8.5, credits: 24 },
-      semester2: { gpa: 9.1, credits: 22 },
+      semester1: {
+        gpa: 8.5,
+        credits: 24,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 9.1,
+        credits: 22,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Germany: {
@@ -201,15 +291,25 @@ export const countryData = {
       resultTotalCredits: 'Gesamt Credit Points',
     },
     example: {
-      semester1: { gpa: 1.7, credits: 30 },
-      semester2: { gpa: 1.3, credits: 30 },
+      semester1: {
+        gpa: 1.7,
+        credits: 30,
+        GPATerm: 'Semester 1 Note',
+        creditsTerm: 'Credit Points',
+      },
+      semester2: {
+        gpa: 1.3,
+        credits: 30,
+        GPATerm: 'Semester 2 Note',
+        creditsTerm: 'Credit Points',
+      },
     },
   },
   France: {
     code: 'FR',
     name: 'France',
     terms: {
-      semesterGPA: 'Moyenne (out of 20)',
+      semesterGPA: 'Moyenne',
       semesterCredits: 'Crédits ECTS',
       calculateCGPA: 'Calculer la moyenne générale',
       addSemester: 'Ajouter un semestre',
@@ -221,8 +321,18 @@ export const countryData = {
       resultTotalCredits: 'Total de crédits',
     },
     example: {
-      semester1: { gpa: 14.5, credits: 30 },
-      semester2: { gpa: 15.2, credits: 30 },
+      semester1: {
+        gpa: 14.5,
+        credits: 30,
+        GPATerm: 'Moyenne 1',
+        creditsTerm: 'Crédits ECTS',
+      },
+      semester2: {
+        gpa: 15.2,
+        credits: 30,
+        GPATerm: 'Moyenne 2',
+        creditsTerm: 'Crédits ECTS',
+      },
     },
   },
   'United Arab Emirates': {
@@ -241,15 +351,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 15 },
-      semester2: { gpa: 3.8, credits: 18 },
+      semester1: {
+        gpa: 3.5,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   Bangladesh: {
     code: 'BD',
     name: 'Bangladesh',
     terms: {
-      semesterGPA: 'Semester GPA (out of 4.0)',
+      semesterGPA: 'Semester GPA',
       semesterCredits: 'Credits',
       calculateCGPA: 'Calculate CGPA',
       addSemester: 'Add Semester',
@@ -261,15 +381,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 15 },
-      semester2: { gpa: 3.8, credits: 18 },
+      semester1: {
+        gpa: 3.5,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Netherlands: {
     code: 'NL',
     name: 'Netherlands',
     terms: {
-      semesterGPA: 'Gemiddelde (out of 10)',
+      semesterGPA: 'Gemiddelde',
       semesterCredits: 'Studiepunten (EC)',
       calculateCGPA: 'Gemiddelde cijfer berekenen',
       addSemester: 'Semester toevoegen',
@@ -281,8 +411,18 @@ export const countryData = {
       resultTotalCredits: 'Totaal aantal studiepunten',
     },
     example: {
-      semester1: { gpa: 7.5, credits: 30 },
-      semester2: { gpa: 8.0, credits: 30 },
+      semester1: {
+        gpa: 7.5,
+        credits: 30,
+        GPATerm: 'Gemiddelde 1',
+        creditsTerm: 'Studiepunten (EC)',
+      },
+      semester2: {
+        gpa: 8.0,
+        credits: 30,
+        GPATerm: 'Gemiddelde 2',
+        creditsTerm: 'Studiepunten (EC)',
+      },
     },
   },
   'Saudi Arabia': {
@@ -301,15 +441,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.75, credits: 16 },
-      semester2: { gpa: 4.0, credits: 18 },
+      semester1: {
+        gpa: 3.75,
+        credits: 16,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 4.0,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   Turkey: {
     code: 'TR',
     name: 'Turkey',
     terms: {
-      semesterGPA: 'Dönem Not Ortalaması (out of 4.0)',
+      semesterGPA: 'Dönem Not Ortalaması',
       semesterCredits: 'AKTS (ECTS) / Kredi',
       calculateCGPA: 'GNO hesapla',
       addSemester: 'Dönem Ekle',
@@ -321,15 +471,25 @@ export const countryData = {
       resultTotalCredits: 'Toplam Kredi',
     },
     example: {
-      semester1: { gpa: 3.2, credits: 30 },
-      semester2: { gpa: 3.5, credits: 30 },
+      semester1: {
+        gpa: 3.2,
+        credits: 30,
+        GPATerm: 'Dönem 1 GPA',
+        creditsTerm: 'Kredisi',
+      },
+      semester2: {
+        gpa: 3.5,
+        credits: 30,
+        GPATerm: 'Dönem 2 GPA',
+        creditsTerm: 'Kredisi',
+      },
     },
   },
   Nepal: {
     code: 'NP',
     name: 'Nepal',
     terms: {
-      semesterGPA: 'Semester GPA (out of 4.0)',
+      semesterGPA: 'Semester GPA',
       semesterCredits: 'Credits',
       calculateCGPA: 'Calculate CGPA',
       addSemester: 'Add Semester',
@@ -341,15 +501,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.2, credits: 16 },
-      semester2: { gpa: 3.5, credits: 18 },
+      semester1: {
+        gpa: 3.2,
+        credits: 16,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.5,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Nigeria: {
     code: 'NG',
     name: 'Nigeria',
     terms: {
-      semesterGPA: 'Semester GPA (out of 5.0)',
+      semesterGPA: 'Semester GPA',
       semesterCredits: 'Credit Units',
       calculateCGPA: 'Calculate CGPA',
       addSemester: 'Add Semester',
@@ -361,8 +531,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Units',
     },
     example: {
-      semester1: { gpa: 4.2, credits: 18 },
-      semester2: { gpa: 4.5, credits: 20 },
+      semester1: {
+        gpa: 4.2,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Units',
+      },
+      semester2: {
+        gpa: 4.5,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Units',
+      },
     },
   },
   'Sri Lanka': {
@@ -381,8 +561,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.2, credits: 15 },
-      semester2: { gpa: 3.5, credits: 18 },
+      semester1: {
+        gpa: 3.2,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.5,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Indonesia: {
@@ -401,8 +591,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.2, credits: 20 },
-      semester2: { gpa: 3.5, credits: 22 },
+      semester1: {
+        gpa: 3.2,
+        credits: 20,
+        GPATerm: 'IP Semester 1',
+        creditsTerm: 'SKS',
+      },
+      semester2: {
+        gpa: 3.5,
+        credits: 22,
+        GPATerm: 'IP Semester 2',
+        creditsTerm: 'SKS',
+      },
     },
   },
   Cyprus: {
@@ -421,8 +621,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 30 },
-      semester2: { gpa: 3.8, credits: 30 },
+      semester1: {
+        gpa: 3.5,
+        credits: 30,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 30,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Qatar: {
@@ -441,15 +651,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.6, credits: 15 },
-      semester2: { gpa: 3.9, credits: 16 },
+      semester1: {
+        gpa: 3.6,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.9,
+        credits: 16,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   'South Korea': {
     code: 'KR',
     name: 'South Korea',
     terms: {
-      semesterGPA: 'Semester GPA (out of 4.5)',
+      semesterGPA: 'Semester GPA',
       semesterCredits: 'Credits (학점)',
       calculateCGPA: 'Calculate CGPA',
       addSemester: 'Add Semester',
@@ -461,15 +681,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 4.1, credits: 18 },
-      semester2: { gpa: 4.3, credits: 20 },
+      semester1: {
+        gpa: 4.1,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits (학점)',
+      },
+      semester2: {
+        gpa: 4.3,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits (학점)',
+      },
     },
   },
   Tunisia: {
     code: 'TN',
     name: 'Tunisia',
     terms: {
-      semesterGPA: 'Moyenne (out of 20)',
+      semesterGPA: 'Moyenne',
       semesterCredits: 'Crédits ECTS',
       calculateCGPA: 'Calculer la moyenne générale',
       addSemester: 'Ajouter un semestre',
@@ -481,8 +711,18 @@ export const countryData = {
       resultTotalCredits: 'Total de crédits',
     },
     example: {
-      semester1: { gpa: 12.5, credits: 30 },
-      semester2: { gpa: 14.8, credits: 30 },
+      semester1: {
+        gpa: 12.5,
+        credits: 30,
+        GPATerm: 'Moyenne 1',
+        creditsTerm: 'Crédits ECTS',
+      },
+      semester2: {
+        gpa: 14.8,
+        credits: 30,
+        GPATerm: 'Moyenne 2',
+        creditsTerm: 'Crédits ECTS',
+      },
     },
   },
   Brunei: {
@@ -501,15 +741,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 18 },
-      semester2: { gpa: 3.8, credits: 20 },
+      semester1: {
+        gpa: 3.5,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Australia: {
     code: 'AU',
     name: 'Australia',
     terms: {
-      semesterGPA: 'Semester GPA (out of 7.0)',
+      semesterGPA: 'Semester GPA',
       semesterCredits: 'Credits / Credit Points',
       calculateCGPA: 'Calculate CGPA',
       addSemester: 'Add Semester',
@@ -521,15 +771,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 5.5, credits: 24 },
-      semester2: { gpa: 6.2, credits: 24 },
+      semester1: {
+        gpa: 5.5,
+        credits: 24,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 6.2,
+        credits: 24,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Hungary: {
     code: 'HU',
     name: 'Hungary',
     terms: {
-      semesterGPA: 'Szemeszter Átlag (out of 5.0)',
+      semesterGPA: 'Szemeszter Átlag',
       semesterCredits: 'Kredit (ECTS)',
       calculateCGPA: 'Szemeszter Átlag számítása',
       addSemester: 'Szemeszter hozzáadása',
@@ -541,15 +801,25 @@ export const countryData = {
       resultTotalCredits: 'Összes kredit',
     },
     example: {
-      semester1: { gpa: 4.5, credits: 30 },
-      semester2: { gpa: 4.8, credits: 30 },
+      semester1: {
+        gpa: 4.5,
+        credits: 30,
+        GPATerm: 'Szemeszter 1 Átlag',
+        creditsTerm: 'Kredit',
+      },
+      semester2: {
+        gpa: 4.8,
+        credits: 30,
+        GPATerm: 'Szemeszter 2 Átlag',
+        creditsTerm: 'Kredit',
+      },
     },
   },
   Azerbaijan: {
     code: 'AZ',
     name: 'Azerbaijan',
     terms: {
-      semesterGPA: 'GPA (out of 4.0)',
+      semesterGPA: 'GPA',
       semesterCredits: 'Credits / Kredit',
       calculateCGPA: 'GPA hesablayın',
       addSemester: 'Semestr əlavə et',
@@ -561,8 +831,18 @@ export const countryData = {
       resultTotalCredits: 'Ümumi kredit',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 30 },
-      semester2: { gpa: 3.8, credits: 30 },
+      semester1: {
+        gpa: 3.5,
+        credits: 30,
+        GPATerm: 'Semestr 1 GPA',
+        creditsTerm: 'Kredit',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 30,
+        GPATerm: 'Semestr 2 GPA',
+        creditsTerm: 'Kredit',
+      },
     },
   },
   Ireland: {
@@ -581,8 +861,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 78, credits: 30 },
-      semester2: { gpa: 72, credits: 30 },
+      semester1: {
+        gpa: 78,
+        credits: 30,
+        GPATerm: 'Semester 1 Percentage',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 72,
+        credits: 30,
+        GPATerm: 'Semester 2 Percentage',
+        creditsTerm: 'Credits',
+      },
     },
   },
 
@@ -602,15 +892,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 18 },
-      semester2: { gpa: 3.8, credits: 20 },
+      semester1: {
+        gpa: 3.5,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits (単位)',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits (単位)',
+      },
     },
   },
   Italy: {
     code: 'IT',
     name: 'Italy',
     terms: {
-      semesterGPA: 'Moyenne par semestre (out of 30)',
+      semesterGPA: 'Moyenne par semestre',
       semesterCredits: 'Crediti Formativi Universitari (CFU)',
       calculateCGPA: 'Calcolare la media generale',
       addSemester: 'Aggiungi semestre',
@@ -622,8 +922,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 25, credits: 30 },
-      semester2: { gpa: 28, credits: 30 },
+      semester1: {
+        gpa: 25,
+        credits: 30,
+        GPATerm: 'Voto medio 1',
+        creditsTerm: 'Crediti',
+      },
+      semester2: {
+        gpa: 28,
+        credits: 30,
+        GPATerm: 'Voto medio 2',
+        creditsTerm: 'Crediti',
+      },
     },
   },
   Kuwait: {
@@ -642,15 +952,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.6, credits: 15 },
-      semester2: { gpa: 3.9, credits: 16 },
+      semester1: {
+        gpa: 3.6,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.9,
+        credits: 16,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   Poland: {
     code: 'PL',
     name: 'Poland',
     terms: {
-      semesterGPA: 'Średnia ocen (out of 5.0)',
+      semesterGPA: 'Średnia ocen',
       semesterCredits: 'Punkty ECTS',
       calculateCGPA: 'Średnia ważona ocen',
       addSemester: 'Dodaj semestr',
@@ -662,8 +982,18 @@ export const countryData = {
       resultTotalCredits: 'Całkowita liczba punktów ECTS',
     },
     example: {
-      semester1: { gpa: 4.2, credits: 30 },
-      semester2: { gpa: 4.5, credits: 30 },
+      semester1: {
+        gpa: 4.2,
+        credits: 30,
+        GPATerm: 'Średnia ocen 1',
+        creditsTerm: 'Punkty ECTS',
+      },
+      semester2: {
+        gpa: 4.5,
+        credits: 30,
+        GPATerm: 'Średnia ocen 2',
+        creditsTerm: 'Punkty ECTS',
+      },
     },
   },
   Bahrain: {
@@ -682,8 +1012,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.6, credits: 15 },
-      semester2: { gpa: 3.9, credits: 16 },
+      semester1: {
+        gpa: 3.6,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.9,
+        credits: 16,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   Thailand: {
@@ -702,15 +1042,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 18 },
-      semester2: { gpa: 3.8, credits: 20 },
+      semester1: {
+        gpa: 3.5,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Morocco: {
     code: 'MA',
     name: 'Morocco',
     terms: {
-      semesterGPA: 'Moyenne par semestre (out of 20)',
+      semesterGPA: 'Moyenne par semestre',
       semesterCredits: 'Crédits',
       calculateCGPA: 'Calculer la moyenne générale',
       addSemester: 'Ajouter un semestre',
@@ -722,15 +1072,25 @@ export const countryData = {
       resultTotalCredits: 'Total de crédits',
     },
     example: {
-      semester1: { gpa: 12.5, credits: 30 },
-      semester2: { gpa: 14.8, credits: 30 },
+      semester1: {
+        gpa: 12.5,
+        credits: 30,
+        GPATerm: 'Moyenne 1',
+        creditsTerm: 'Crédits',
+      },
+      semester2: {
+        gpa: 14.8,
+        credits: 30,
+        GPATerm: 'Moyenne 2',
+        creditsTerm: 'Crédits',
+      },
     },
   },
   Switzerland: {
     code: 'CH',
     name: 'Switzerland',
     terms: {
-      semesterGPA: 'Semesterdurchschnitt (out of 6.0)',
+      semesterGPA: 'Semesterdurchschnitt',
       semesterCredits: 'Credits / ECTS',
       calculateCGPA: 'Gesamtdurchschnitt berechnen',
       addSemester: 'Semester hinzufügen',
@@ -742,8 +1102,18 @@ export const countryData = {
       resultTotalCredits: 'Gesamte Credits',
     },
     example: {
-      semester1: { gpa: 5.2, credits: 30 },
-      semester2: { gpa: 5.5, credits: 30 },
+      semester1: {
+        gpa: 5.2,
+        credits: 30,
+        GPATerm: 'Semester 1 Durchschnitt',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 5.5,
+        credits: 30,
+        GPATerm: 'Semester 2 Durchschnitt',
+        creditsTerm: 'Credits',
+      },
     },
   },
   China: {
@@ -762,15 +1132,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 20 },
-      semester2: { gpa: 3.8, credits: 22 },
+      semester1: {
+        gpa: 3.5,
+        credits: 20,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 22,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Romania: {
     code: 'RO',
     name: 'Romania',
     terms: {
-      semesterGPA: 'Media semestrială (out of 10)',
+      semesterGPA: 'Media semestrială',
       semesterCredits: 'Credite ECTS',
       calculateCGPA: 'Calculare media generală',
       addSemester: 'Adaugă semestru',
@@ -782,8 +1162,18 @@ export const countryData = {
       resultTotalCredits: 'Total credite',
     },
     example: {
-      semester1: { gpa: 8.5, credits: 30 },
-      semester2: { gpa: 9.1, credits: 30 },
+      semester1: {
+        gpa: 8.5,
+        credits: 30,
+        GPATerm: 'Media semestrului 1',
+        creditsTerm: 'Credite',
+      },
+      semester2: {
+        gpa: 9.1,
+        credits: 30,
+        GPATerm: 'Media semestrului 2',
+        creditsTerm: 'Credite',
+      },
     },
   },
   Jordan: {
@@ -802,15 +1192,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 15 },
-      semester2: { gpa: 3.8, credits: 16 },
+      semester1: {
+        gpa: 3.5,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 16,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   'New Zealand': {
     code: 'NZ',
     name: 'New Zealand',
     terms: {
-      semesterGPA: 'Semester GPA (out of 9.0)',
+      semesterGPA: 'Semester GPA',
       semesterCredits: 'Points',
       calculateCGPA: 'Calculate CGPA',
       addSemester: 'Add Semester',
@@ -822,15 +1222,25 @@ export const countryData = {
       resultTotalCredits: 'Total Points',
     },
     example: {
-      semester1: { gpa: 6.5, credits: 60 },
-      semester2: { gpa: 7.2, credits: 60 },
+      semester1: {
+        gpa: 6.5,
+        credits: 60,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Points',
+      },
+      semester2: {
+        gpa: 7.2,
+        credits: 60,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Points',
+      },
     },
   },
   Brazil: {
     code: 'BR',
     name: 'Brazil',
     terms: {
-      semesterGPA: 'Média Semestral (out of 10)',
+      semesterGPA: 'Média Semestral',
       semesterCredits: 'Créditos',
       calculateCGPA: 'Calcular Coeficiente de Rendimento',
       addSemester: 'Adicionar Semestre',
@@ -842,15 +1252,25 @@ export const countryData = {
       resultTotalCredits: 'Total de Créditos',
     },
     example: {
-      semester1: { gpa: 8.5, credits: 24 },
-      semester2: { gpa: 9.1, credits: 22 },
+      semester1: {
+        gpa: 8.5,
+        credits: 24,
+        GPATerm: 'Média Semestral 1',
+        creditsTerm: 'Créditos',
+      },
+      semester2: {
+        gpa: 9.1,
+        credits: 22,
+        GPATerm: 'Média Semestral 2',
+        creditsTerm: 'Créditos',
+      },
     },
   },
   Spain: {
     code: 'ES',
     name: 'Spain',
     terms: {
-      semesterGPA: 'Nota media (out of 10)',
+      semesterGPA: 'Nota media',
       semesterCredits: 'Créditos ECTS',
       calculateCGPA: 'Calcular la nota media general',
       addSemester: 'Añadir semestre',
@@ -862,8 +1282,18 @@ export const countryData = {
       resultTotalCredits: 'Total de Créditos',
     },
     example: {
-      semester1: { gpa: 8.5, credits: 30 },
-      semester2: { gpa: 9.1, credits: 30 },
+      semester1: {
+        gpa: 8.5,
+        credits: 30,
+        GPATerm: 'Nota media 1',
+        creditsTerm: 'Créditos',
+      },
+      semester2: {
+        gpa: 9.1,
+        credits: 30,
+        GPATerm: 'Nota media 2',
+        creditsTerm: 'Créditos',
+      },
     },
   },
   'United States': {
@@ -882,8 +1312,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 15 },
-      semester2: { gpa: 3.8, credits: 16 },
+      semester1: {
+        gpa: 3.5,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 16,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   Canada: {
@@ -902,8 +1342,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credits',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 15 },
-      semester2: { gpa: 3.8, credits: 18 },
+      semester1: {
+        gpa: 3.5,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credits',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credits',
+      },
     },
   },
   Ghana: {
@@ -922,8 +1372,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 15 },
-      semester2: { gpa: 3.8, credits: 16 },
+      semester1: {
+        gpa: 3.5,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 16,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   Ethiopia: {
@@ -942,8 +1402,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 16 },
-      semester2: { gpa: 3.8, credits: 18 },
+      semester1: {
+        gpa: 3.5,
+        credits: 16,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 18,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   Oman: {
@@ -962,15 +1432,25 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Hours',
     },
     example: {
-      semester1: { gpa: 3.5, credits: 15 },
-      semester2: { gpa: 3.8, credits: 16 },
+      semester1: {
+        gpa: 3.5,
+        credits: 15,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.8,
+        credits: 16,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
     },
   },
   Uganda: {
     code: 'UG',
     name: 'Uganda',
     terms: {
-      semesterGPA: 'Semester GPA (out of 5.0)',
+      semesterGPA: 'Semester GPA',
       semesterCredits: 'Credit Units',
       calculateCGPA: 'Calculate CGPA',
       addSemester: 'Add Semester',
@@ -982,8 +1462,18 @@ export const countryData = {
       resultTotalCredits: 'Total Credit Units',
     },
     example: {
-      semester1: { gpa: 4.2, credits: 18 },
-      semester2: { gpa: 4.5, credits: 20 },
+      semester1: {
+        gpa: 4.2,
+        credits: 18,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Units',
+      },
+      semester2: {
+        gpa: 4.5,
+        credits: 20,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Units',
+      },
     },
   },
 };
