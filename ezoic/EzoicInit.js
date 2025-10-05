@@ -13,6 +13,7 @@ const EzoicScripts = () => {
           ezstandalone.cmd.push(function () {
             ezstandalone.showAds();
           });
+
           clearInterval(intervalId);
         }
       } catch (err) {
@@ -39,6 +40,18 @@ const EzoicScripts = () => {
         src="https://cmp.gatekeeperconsent.com/min.js"
         data-cfasync="false"
         strategy="beforeInteractive"
+      />
+
+      {/* Ezoic Rewarded Ads Initialization */}
+      <Script
+        id="ezoic-rewarded-init"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.ezRewardedAds = window.ezRewardedAds || {};
+            window.ezRewardedAds.cmd = window.ezRewardedAds.cmd || [];
+          `,
+        }}
       />
 
       {/* Ezoic Main Script */}

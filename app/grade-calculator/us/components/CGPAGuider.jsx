@@ -26,7 +26,6 @@ const CountrySelector = ({
   currentExample,
 }) => {
   const [open, setOpen] = useState(false);
-  console.log(currentExample);
 
   // Convert countryData to array format for the selector
   const sortedCountries = Object.keys(countryData)

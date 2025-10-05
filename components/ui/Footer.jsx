@@ -93,7 +93,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div>
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Gradien. All rights reserved.
+            © {new Date().getFullYear()} Gradian. All rights reserved.
           </p>
         </div>
       </div>

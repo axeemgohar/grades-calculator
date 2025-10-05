@@ -1,3 +1,4 @@
+// components/CGPACalculator.jsx
 'use client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,6 +13,8 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 import CountrySelector from '../../us/components/CGPAGuider';
 import useLocationBasedTerms from '@/utils/useLocationBasedTerms';
+import CalculationLimitModal from '@/components/ui/CalculationLimitModal';
+import { useCalculationLimit } from '@/utils/useCalculationLimit';
 
 const semesterList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
@@ -30,8 +33,8 @@ const CGPACalculator = () => {
     semesterTerm: '',
     creditsTerm: '',
   });
+  const [showLimitModal, setShowLimitModal] = useState(false);
 
-  // Location-based terms hook
   const {
     currentTerms,
     showExample,
@@ -40,9 +43,15 @@ const CGPACalculator = () => {
     getCurrentExample,
   } = useLocationBasedTerms();
 
-  const { ref, height } = useElementSize(); // Custom Hook to calculate height
+  const { ref, height } = useElementSize();
 
-  // Add New Semester
+  const {
+    canCalculate,
+    remainingCalculations,
+    incrementCalculation,
+    resetAfterAd,
+  } = useCalculationLimit();
+
   const addSemester = () => {
     setSemesters((prevSemesters) => [
       ...prevSemesters,
@@ -54,7 +63,6 @@ const CGPACalculator = () => {
     ]);
   };
 
-  // Delete Semester
   const removeSemester = () => {
     setSemesters((prevSemesters) => {
       if (prevSemesters.length <= 1) return prevSemesters;
@@ -62,7 +70,6 @@ const CGPACalculator = () => {
     });
   };
 
-  // Handle Input Fields Values
   const updateSemester = (id, field, value) => {
     setSemesters((prevSemesters) =>
       prevSemesters.map((semester) => {
@@ -73,6 +80,13 @@ const CGPACalculator = () => {
 
   const calculateCurrentCGPA = (event) => {
     event.preventDefault();
+
+    // Check if user can calculate
+    if (!canCalculate()) {
+      setShowLimitModal(true);
+      return;
+    }
+
     const validation = semesterListSchema.safeParse(semesters);
 
     if (!validation.success) {
@@ -97,6 +111,9 @@ const CGPACalculator = () => {
       semesterTerm: currentTerms.resultTotalSemesters,
       creditsTerm: currentTerms.resultTotalCredits,
     });
+
+    incrementCalculation();
+
     setLoader(true);
     window.scrollTo({
       top: 0,
@@ -118,6 +135,49 @@ const CGPACalculator = () => {
     });
   };
 
+  const handleShowAd = () => {
+    if (typeof window !== 'undefined' && window.ezRewardedAds) {
+      window.ezRewardedAds.cmd = window.ezRewardedAds.cmd || [];
+
+      window.ezRewardedAds.cmd.push(function () {
+        window.ezRewardedAds.requestWithOverlay(
+          function (result) {
+            if (result.status && result.reward) {
+              resetAfterAd();
+              setShowLimitModal(false);
+              toast.success('Success! You earned 5 more calculations.', {
+                duration: 3000,
+              });
+            } else if (result.status && !result.reward) {
+              toast.warning(
+                'Ad not completed. Please watch the full ad to continue.',
+                {
+                  duration: 3000,
+                }
+              );
+            } else {
+              toast.error('Unable to load ad. Please try again.', {
+                duration: 3000,
+              });
+            }
+          },
+          {
+            title: 'Watch Ad to Continue?',
+            body: [
+              'You will receive 5 more free calculations after watching this ad.',
+            ],
+            accept: 'Watch Ad',
+            cancel: 'Cancel',
+          }
+        );
+      });
+    } else {
+      toast.error('Ad service is not available.', {
+        duration: 3000,
+      });
+    }
+  };
+
   return (
     <>
       {!cgpa.score && !loader ? (
@@ -128,6 +188,18 @@ const CGPACalculator = () => {
             showExample={showExample}
             currentExample={getCurrentExample()}
           />
+
+          {remainingCalculations <= 2 && remainingCalculations > 0 && (
+            <div className="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+              <p className="text-sm text-amber-800">
+                ⚠️ You have{' '}
+                <span className="font-semibold">{remainingCalculations}</span>{' '}
+                calculation{remainingCalculations !== 1 ? 's' : ''} left. Watch
+                an ad to get 5 more!
+              </p>
+            </div>
+          )}
+
           <form onSubmit={calculateCurrentCGPA}>
             <div className="grid border border-indigo-500/50 bg-indigo-300/10 grid-cols-12 rounded-t items-center">
               <div className="col-span-6 py-4 ps-3">
@@ -238,7 +310,7 @@ const CGPACalculator = () => {
                   {currentTerms.deleteSemester} <Trash2 />
                 </Button>
               </div>
-              <Button className="flex-1" type="submit">
+              <Button className="flex-1" onClick={calculateCurrentCGPA}>
                 {currentTerms.calculateCGPA}
               </Button>
             </div>
@@ -254,6 +326,12 @@ const CGPACalculator = () => {
       ) : (
         <DisplayResult onRecalculate={reCalculateCGPA} gpa={cgpa} />
       )}
+
+      <CalculationLimitModal
+        isOpen={showLimitModal}
+        onClose={() => setShowLimitModal(false)}
+        onShowAd={handleShowAd}
+      />
     </>
   );
 };
