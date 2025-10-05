@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 const STORAGE_KEY = 'calc_count';
-const FREE_LIMIT = 10;
+const FREE_LIMIT = 5;
 
 export const useCalculationLimit = () => {
   const [count, setCount] = useState(0);
