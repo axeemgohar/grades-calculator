@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { calculateCGPA } from '@/lib/calculations/cgpa';
 import { PlusSquare, Trash2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { semesterListSchema } from '@/lib/validationSchemas';
 import { toast } from 'sonner';
 import DisplayResult from './DisplayResult';
@@ -34,6 +34,8 @@ const CGPACalculator = () => {
     creditsTerm: '',
   });
   const [showLimitModal, setShowLimitModal] = useState(false);
+  const [adReady, setAdReady] = useState(false);
+  const adPreloadedRef = useRef(false);
 
   const {
     currentTerms,
@@ -51,6 +53,35 @@ const CGPACalculator = () => {
     incrementCalculation,
     resetAfterAd,
   } = useCalculationLimit();
+
+  // Preload ad when user has 2 or fewer calculations remaining
+  useEffect(() => {
+    if (
+      remainingCalculations <= 2 &&
+      remainingCalculations > 0 &&
+      !adPreloadedRef.current
+    ) {
+      preloadAd();
+    }
+  }, [remainingCalculations]);
+
+  const preloadAd = () => {
+    if (typeof window !== 'undefined' && window.ezRewardedAds) {
+      window.ezRewardedAds.cmd = window.ezRewardedAds.cmd || [];
+
+      window.ezRewardedAds.cmd.push(function () {
+        window.ezRewardedAds.request(function (result) {
+          if (result.status) {
+            setAdReady(true);
+            adPreloadedRef.current = true;
+            console.log('Ad preloaded successfully');
+          } else {
+            console.log('Ad preload failed:', result.msg);
+          }
+        });
+      });
+    }
+  };
 
   const addSemester = () => {
     setSemesters((prevSemesters) => [
@@ -137,40 +168,72 @@ const CGPACalculator = () => {
 
   const handleShowAd = () => {
     if (typeof window !== 'undefined' && window.ezRewardedAds) {
-      window.ezRewardedAds.cmd = window.ezRewardedAds.cmd || [];
-
-      window.ezRewardedAds.cmd.push(function () {
-        window.ezRewardedAds.requestWithOverlay(
-          function (result) {
-            if (result.status && result.reward) {
-              resetAfterAd();
-              setShowLimitModal(false);
-              toast.success('Success! You earned 5 more calculations.', {
-                duration: 3000,
-              });
-            } else if (result.status && !result.reward) {
-              toast.warning(
-                'Ad not completed. Please watch the full ad to continue.',
-                {
-                  duration: 3000,
-                }
-              );
-            } else {
-              toast.error('Unable to load ad. Please try again.', {
-                duration: 3000,
-              });
-            }
-          },
-          {
-            title: 'Watch Ad to Continue?',
-            body: [
-              'You will receive 5 more free calculations after watching this ad.',
-            ],
-            accept: 'Watch Ad',
-            cancel: 'Cancel',
+      // If ad is preloaded, show it immediately
+      if (adReady) {
+        window.ezRewardedAds.show(function (result) {
+          if (result.status && result.reward) {
+            resetAfterAd();
+            setShowLimitModal(false);
+            setAdReady(false);
+            adPreloadedRef.current = false;
+            toast.success('Success! You earned 5 more calculations.', {
+              duration: 3000,
+            });
+            // Preload next ad
+            preloadAd();
+          } else if (result.status && !result.reward) {
+            toast.info('Please watch the complete ad to unlock calculations.', {
+              duration: 4000,
+            });
+          } else {
+            toast.error('Unable to show ad. Please try again.', {
+              duration: 3000,
+            });
+            // Try to preload again
+            setAdReady(false);
+            adPreloadedRef.current = false;
+            preloadAd();
           }
-        );
-      });
+        });
+      } else {
+        // Fallback: If ad wasn't preloaded, use requestWithOverlay
+        window.ezRewardedAds.cmd = window.ezRewardedAds.cmd || [];
+
+        window.ezRewardedAds.cmd.push(function () {
+          window.ezRewardedAds.requestWithOverlay(
+            function (result) {
+              if (result.status && result.reward) {
+                resetAfterAd();
+                setShowLimitModal(false);
+                toast.success('Success! You earned 5 more calculations.', {
+                  duration: 3000,
+                });
+                // Preload next ad
+                preloadAd();
+              } else if (result.status && !result.reward) {
+                toast.info(
+                  'Please watch the complete ad to unlock calculations.',
+                  {
+                    duration: 4000,
+                  }
+                );
+              } else {
+                toast.error('Unable to load ad. Please try again.', {
+                  duration: 3000,
+                });
+              }
+            },
+            {
+              title: 'Watch Ad to Continue?',
+              body: [
+                'You will receive 5 more free calculations after watching this ad.',
+              ],
+              accept: 'Watch Ad',
+              cancel: 'Cancel',
+            }
+          );
+        });
+      }
     } else {
       toast.error('Ad service is not available.', {
         duration: 3000,
@@ -188,17 +251,6 @@ const CGPACalculator = () => {
             showExample={showExample}
             currentExample={getCurrentExample()}
           />
-
-          {remainingCalculations <= 2 && remainingCalculations > 0 && (
-            <div className="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-              <p className="text-sm text-amber-800">
-                ⚠️ You have{' '}
-                <span className="font-semibold">{remainingCalculations}</span>{' '}
-                calculation{remainingCalculations !== 1 ? 's' : ''} left. Watch
-                an ad to get 5 more!
-              </p>
-            </div>
-          )}
 
           <form onSubmit={calculateCurrentCGPA}>
             <div className="grid border border-indigo-500/50 bg-indigo-300/10 grid-cols-12 rounded-t items-center">
@@ -310,7 +362,7 @@ const CGPACalculator = () => {
                   {currentTerms.deleteSemester} <Trash2 />
                 </Button>
               </div>
-              <Button className="flex-1" onClick={calculateCurrentCGPA}>
+              <Button className="flex-1" type="submit">
                 {currentTerms.calculateCGPA}
               </Button>
             </div>
