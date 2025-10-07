@@ -42,18 +42,6 @@ const EzoicScripts = () => {
         strategy="beforeInteractive"
       />
 
-      {/* Ezoic Rewarded Ads Initialization */}
-      <Script
-        id="ezoic-rewarded-init"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.ezRewardedAds = window.ezRewardedAds || {};
-            window.ezRewardedAds.cmd = window.ezRewardedAds.cmd || [];
-          `,
-        }}
-      />
-
       {/* Ezoic Main Script */}
       <Script
         id="ezoic-header"
