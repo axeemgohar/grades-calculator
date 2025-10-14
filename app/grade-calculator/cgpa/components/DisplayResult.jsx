@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import ShareResult from '@/utils/ShareResult';
 
-import { RotateCcw } from 'lucide-react';
+import { Percent, RotateCcw, Share2 } from 'lucide-react';
+import Link from 'next/link';
 
 const DisplayResult = ({ gpa, onRecalculate }) => {
   return (
@@ -16,7 +17,10 @@ const DisplayResult = ({ gpa, onRecalculate }) => {
               {gpa.CGPADescription}
             </h3>
             <div className={`text-3xl md:text-4xl font-bold text-indigo-600`}>
-              {gpa.score}{' '}
+              <div className="flex items-center">
+                {gpa.score}
+                <ShareResult gpa={gpa} />
+              </div>
             </div>
           </div>
           <div className="space-y-3">
@@ -44,7 +48,14 @@ const DisplayResult = ({ gpa, onRecalculate }) => {
           <RotateCcw className="text-white" size={20} strokeWidth={2.5} />
           Calculate Again
         </Button>
-        <ShareResult gpa={gpa} />
+        <Link
+          prefetch={false}
+          href="/grade-calculator/cgpa-percentage"
+          className=" !px-12 h-10 bg-white text-indigo-600 !shadow-md border border-indigo-400 hover:bg-indigo-50 rounded-sm flex items-center justify-center gap-2"
+        >
+          Convert to Percentage
+          <Percent size={20} strokeWidth={2} />
+        </Link>
       </div>
     </>
   );

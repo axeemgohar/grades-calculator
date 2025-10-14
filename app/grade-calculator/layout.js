@@ -23,6 +23,15 @@ const CalculatorLayout = ({ children }) => {
               </li>
               <li>
                 <Link
+                  href="/grade-calculator/cgpa-to-gpa"
+                  className="flex items-center hover:underline"
+                >
+                  <LinkIcon size={15} className="mr-3" />
+                  CGPA to GPA Converter
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/grade-calculator/us"
                   className="flex items-center  hover:underline"
                 >

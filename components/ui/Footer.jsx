@@ -6,6 +6,7 @@ const calculatorLinks = [
   { label: 'UK Grade Calculator', href: '/grade-calculator/uk' },
   { label: 'US Grade Calculator', href: '/grade-calculator/us' },
   { label: 'CGPA to Percentage', href: '/grade-calculator/cgpa-percentage' },
+  { label: 'CGPA to GPA', href: '/grade-calculator/cgpa-to-gpa' },
 ];
 
 const companyLinks = [

@@ -114,18 +114,17 @@ const ShareResult = ({ gpa }) => {
       )}
 
       <Button
-        className="!px-12 h-10 bg-white text-indigo-600 border border-indigo-400 !shadow-md hover:bg-indigo-50"
+        className="!px-4   text-indigo-600 bg-transparent !shadow-none hover:bg-indigo-50"
         onClick={shareImage}
         disabled={isGenerating}
         id="CGPA-shared"
       >
         {isGenerating ? (
-          <div className="animate-spin w-4 h-4 border-2 border-current border-t-transparent rounded-full mr-2" />
+          <div className="animate-spin w-4 h-4 border-2 border-current border-t-transparent rounded-full " />
         ) : (
-          //   <Share2 size={18} className="mr-2" />
-          <Camera className="mr-1 !h-4.5 !w-4.5" />
+          <Share2 size={24} className="!h-7 !w-7 text-indigo-600" />
         )}
-        {isGenerating ? 'Generating...' : 'Share Result'}
+        {isGenerating ? 'Generating...' : ''}
       </Button>
     </>
   );

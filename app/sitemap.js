@@ -25,6 +25,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://calculatecgpa.com/grade-calculator/cgpa-to-gpa',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
       url: 'https://www.calculatecgpa.com/about-us',
       lastModified: new Date(),
       changeFrequency: 'yearly',

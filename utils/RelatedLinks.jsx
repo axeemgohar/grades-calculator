@@ -13,10 +13,19 @@ const RelatedLinks = () => {
             <li>
               <Link
                 href="/grade-calculator/cgpa-percentage"
-                className="flex items-center  hover:underline"
+                className="flex items-center hover:underline"
               >
                 <LinkIcon size={15} className="mr-3" />
                 CGPA to Percentage Calculator
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/grade-calculator/cgpa-to-gpa"
+                className="flex items-center hover:underline"
+              >
+                <LinkIcon size={15} className="mr-3" />
+                CGPA to GPA Converter
               </Link>
             </li>
             <li>

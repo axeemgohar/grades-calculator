@@ -41,6 +41,11 @@ const Header = () => {
       href: '/grade-calculator/cgpa-percentage',
       description: 'Convert CGPA to percentage and Percentage to CGPA',
     },
+    {
+      label: 'CGPA to GPA',
+      href: '/grade-calculator/cgpa-to-gpa',
+      description: 'Convert CGPA to GPA on any scale',
+    },
   ];
 
   const staticPages = [
