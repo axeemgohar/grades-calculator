@@ -74,6 +74,15 @@ export default function Home() {
                   <LinkIcon size={15} className="mr-3" />
                   UK Classification Calculator
                 </Link>
+                <li>
+                  <Link
+                    href="/grade-calculator/nz"
+                    className="flex items-center  hover:underline"
+                  >
+                    <LinkIcon size={15} className="mr-3" />
+                    NZ GPA Calculator
+                  </Link>
+                </li>
               </li>
             </ul>
           </div>

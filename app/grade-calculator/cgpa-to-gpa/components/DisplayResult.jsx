@@ -5,7 +5,7 @@ const DisplayResult = ({ gpa, onRecalculate }) => {
   return (
     <>
       <output
-        id="CGPA_Percentage_calculated"
+        id="CGPA_to_GPA_calculated"
         className="mt-8 block md:p-6 p-4 bg-indigo-50 border border-indigo-300 rounded-lg"
       >
         <div className="flex md:flex-row items-center justify-between gap-4">

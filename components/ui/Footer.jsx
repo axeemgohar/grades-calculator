@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const calculatorLinks = [
-  { label: 'CGPA Calculator', href: '/' },
-  { label: 'UK Grade Calculator', href: '/grade-calculator/uk' },
-  { label: 'US Grade Calculator', href: '/grade-calculator/us' },
+  { label: 'UK DC Calculator', href: '/grade-calculator/uk' },
+  { label: 'US GPA Calculator', href: '/grade-calculator/us' },
+  { label: 'NZ GPA Calculator', href: '/grade-calculator/nz' },
   { label: 'CGPA to Percentage', href: '/grade-calculator/cgpa-percentage' },
   { label: 'CGPA to GPA', href: '/grade-calculator/cgpa-to-gpa' },
 ];

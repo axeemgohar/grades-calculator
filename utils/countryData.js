@@ -254,7 +254,7 @@ export const countryData = {
       calculateCGPA: 'Calculate CGPA',
       addSemester: 'Add Semester',
       deleteSemester: 'Delete Semester',
-      placeholderGPA: 'Semester {{n}} SGPA',
+      placeholderGPA: 'Semester {{n}} GPA',
       placeholderCredits: 'Semester {{n}} Credits',
       resultCGPA: 'Your CGPA Result',
       resultTotalSemesters: 'Total Semesters',
@@ -1230,7 +1230,7 @@ export const countryData = {
       },
       semester2: {
         gpa: 7.2,
-        credits: 60,
+        credits: 90,
         GPATerm: 'Semester 2 GPA',
         creditsTerm: 'Points',
       },

@@ -48,6 +48,15 @@ const CalculatorLayout = ({ children }) => {
                   UK Classification Calculator
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/grade-calculator/nz"
+                  className="flex items-center  hover:underline"
+                >
+                  <LinkIcon size={15} className="mr-3" />
+                  NZ GPA Calculator
+                </Link>
+              </li>
             </ul>
           </div>
           <div id="ezoic-pub-ad-placeholder-114"></div>

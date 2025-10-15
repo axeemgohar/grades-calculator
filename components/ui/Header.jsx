@@ -37,6 +37,11 @@ const Header = () => {
       description: 'Calculate US GPA and letter grades',
     },
     {
+      label: 'NZ GPA Calculator',
+      href: '/grade-calculator/nz',
+      description: 'Calculate New Zealand GPA (9-point scale)',
+    },
+    {
       label: 'CGPA to Percentage',
       href: '/grade-calculator/cgpa-percentage',
       description: 'Convert CGPA to percentage and Percentage to CGPA',

@@ -1,6 +1,5 @@
 import RelatedLinks from '@/utils/RelatedLinks';
 import CGPAPercentageContent from './components/CGPAtoGPAContent';
-import CGPAPercentageCalculatorSchema from '@/JSON-LD Schemas/CGPAPercentageSchema';
 import CGPAtoGPACalculator from './components/CGPAtoGPACalculator';
 
 export const metadata = {
@@ -33,7 +32,6 @@ const USA = () => {
       <div className="bg-white mt-8">
         <CGPAPercentageContent />
       </div>
-      <CGPAPercentageCalculatorSchema />
     </div>
   );
 };
