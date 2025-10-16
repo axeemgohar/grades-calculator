@@ -365,6 +365,36 @@ export const countryData = {
       },
     },
   },
+  'United Arab Emirates (English)': {
+    code: 'AE-EN',
+    name: 'United Arab Emirates (English)',
+    terms: {
+      semesterGPA: 'Semester GPA (out of 4.0)',
+      semesterCredits: 'Credit Hours',
+      calculateCGPA: 'Calculate CGPA',
+      addSemester: 'Add Semester',
+      deleteSemester: 'Delete Semester',
+      placeholderGPA: 'Semester {{n}} GPA',
+      placeholderCredits: 'Credit Hours {{n}}',
+      resultCGPA: 'Your CGPA Result',
+      resultTotalSemesters: 'Total Semesters',
+      resultTotalCredits: 'Total Credit Hours',
+    },
+    example: {
+      semester1: {
+        gpa: 3.6,
+        credits: 16,
+        GPATerm: 'Semester 1 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+      semester2: {
+        gpa: 3.9,
+        credits: 14,
+        GPATerm: 'Semester 2 GPA',
+        creditsTerm: 'Credit Hours',
+      },
+    },
+  },
   Bangladesh: {
     code: 'BD',
     name: 'Bangladesh',
@@ -665,9 +695,9 @@ export const countryData = {
       },
     },
   },
-  'South Korea': {
-    code: 'KR',
-    name: 'South Korea',
+  'South Korea (English)': {
+    code: 'KR-EN',
+    name: 'South Korea (English)',
     terms: {
       semesterGPA: 'Semester GPA',
       semesterCredits: 'Credits (학점)',
@@ -692,6 +722,36 @@ export const countryData = {
         credits: 20,
         GPATerm: 'Semester 2 GPA',
         creditsTerm: 'Credits (학점)',
+      },
+    },
+  },
+  'South Korea (한국인)': {
+    code: 'KR',
+    name: 'South Korea (한국인)',
+    terms: {
+      semesterGPA: '학기 평점 평균',
+      semesterCredits: '학점',
+      calculateCGPA: '누적 평점 평균 계산',
+      addSemester: '학기 추가',
+      deleteSemester: '학기 삭제',
+      placeholderGPA: '평점 평균 학기 {{n}}',
+      placeholderCredits: '학점 {{n}}',
+      resultCGPA: '당신의 누적 평점 평균',
+      resultTotalSemesters: '총 학기 수',
+      resultTotalCredits: '총 학점',
+    },
+    example: {
+      semester1: {
+        gpa: 4.1,
+        credits: 18,
+        GPATerm: '평점 평균 학기 1',
+        creditsTerm: '학점',
+      },
+      semester2: {
+        gpa: 4.4,
+        credits: 17,
+        GPATerm: '평점 평균 학기 2',
+        creditsTerm: '학점',
       },
     },
   },
@@ -876,9 +936,9 @@ export const countryData = {
     },
   },
 
-  Japan: {
-    code: 'JP',
-    name: 'Japan',
+  'Japan (English)': {
+    code: 'JP-EN',
+    name: 'Japan (English)',
     terms: {
       semesterGPA: 'Semester GPA',
       semesterCredits: 'Credits (単位)',
@@ -903,6 +963,36 @@ export const countryData = {
         credits: 20,
         GPATerm: 'Semester 2 GPA',
         creditsTerm: 'Credits (単位)',
+      },
+    },
+  },
+  'Japan (日本語)': {
+    code: 'JP',
+    name: 'Japan (日本語)',
+    terms: {
+      semesterGPA: '学期GPA',
+      semesterCredits: '単位',
+      calculateCGPA: '累積GPAを計算する',
+      addSemester: '学期を追加',
+      deleteSemester: '学期を削除',
+      placeholderGPA: 'GPA 学期 {{n}}',
+      placeholderCredits: '単位数 {{n}}',
+      resultCGPA: 'あなたの累積GPA',
+      resultTotalSemesters: '総学期数',
+      resultTotalCredits: '総単位数',
+    },
+    example: {
+      semester1: {
+        gpa: 3.2,
+        credits: 15,
+        GPATerm: 'GPA 学期 1',
+        creditsTerm: '単位数',
+      },
+      semester2: {
+        gpa: 3.7,
+        credits: 16,
+        GPATerm: 'GPA 学期 2',
+        creditsTerm: '単位数',
       },
     },
   },
@@ -1116,9 +1206,9 @@ export const countryData = {
       },
     },
   },
-  China: {
-    code: 'CN',
-    name: 'China',
+  'China (English)': {
+    code: 'CN-EN',
+    name: 'China (English)',
     terms: {
       semesterGPA: 'Semester GPA',
       semesterCredits: 'Credits (学分)',
@@ -1143,6 +1233,36 @@ export const countryData = {
         credits: 22,
         GPATerm: 'Semester 2 GPA',
         creditsTerm: 'Credits',
+      },
+    },
+  },
+  'China (中国人)': {
+    code: 'CN',
+    name: 'China (中国人)',
+    terms: {
+      semesterGPA: '学期平均绩点 ',
+      semesterCredits: '学分',
+      calculateCGPA: '计算累计平均绩点',
+      addSemester: '添加学期',
+      deleteSemester: '删除学期',
+      placeholderGPA: '平均绩点 {{n}}',
+      placeholderCredits: '学分 {{n}}',
+      resultCGPA: '您的累计平均绩点',
+      resultTotalSemesters: '总学期数',
+      resultTotalCredits: '总学分',
+    },
+    example: {
+      semester1: {
+        gpa: 3.6,
+        credits: 17,
+        GPATerm: '学期 1 平均绩点',
+        creditsTerm: '学分',
+      },
+      semester2: {
+        gpa: 3.9,
+        credits: 16,
+        GPATerm: '学期 2 平均绩点',
+        creditsTerm: '学分',
       },
     },
   },
