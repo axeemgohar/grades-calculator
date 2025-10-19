@@ -128,9 +128,8 @@ const CGPACalculator = () => {
             <div className="mb-4 rounded-lg border border-green-200 bg-green-50 p-3 flex items-center gap-2">
               <MapPin className="h-4 w-4 text-green-600 shrink-0" />
               <p className="text-sm text-green-800">
-                Calculation mode selected for{' '}
-                <span className="font-bold">{selectedCountry}</span> grading
-                system.
+                Calculation mode selected for the grading system of{' '}
+                <span className="font-bold">{selectedCountry}</span>.
               </p>
             </div>
           )}
