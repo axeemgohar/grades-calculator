@@ -6,6 +6,7 @@ const useLocationBasedTerms = () => {
   const [selectedCountry, setSelectedCountry] = useState('');
   const [currentTerms, setCurrentTerms] = useState(getDefaultTerms());
   const [showExample, setShowExample] = useState(false);
+  const [isLocationDetected, setIsLocationDetected] = useState(false);
 
   // Fetch user location on mount (background, non-blocking)
   useEffect(() => {
@@ -17,13 +18,15 @@ const useLocationBasedTerms = () => {
 
         if (detectedCountryName && countryData[detectedCountryName]) {
           setDetectedCountry(detectedCountryName);
-          // Only update terms if no country is manually selected
-          if (!selectedCountry) {
-            setCurrentTerms(countryData[detectedCountryName].terms);
-          }
+          // Auto-select the detected country
+          setSelectedCountry(detectedCountryName);
+          setCurrentTerms(countryData[detectedCountryName].terms);
+          setShowExample(true);
+          setIsLocationDetected(true);
         }
       } catch (error) {
         console.log('Location detection failed, using defaults');
+        setIsLocationDetected(false);
       }
     };
 
@@ -58,6 +61,7 @@ const useLocationBasedTerms = () => {
     handleCountrySelect,
     getCurrentExample,
     detectedCountry,
+    isLocationDetected,
   };
 };
 

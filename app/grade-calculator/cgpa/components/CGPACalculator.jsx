@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { calculateCGPA } from '@/lib/calculations/cgpa';
-import { PlusSquare, Trash2 } from 'lucide-react';
+import { PlusSquare, Trash2, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import { semesterListSchema } from '@/lib/validationSchemas';
 import { toast } from 'sonner';
@@ -38,6 +38,7 @@ const CGPACalculator = () => {
     selectedCountry,
     handleCountrySelect,
     getCurrentExample,
+    isLocationDetected,
   } = useLocationBasedTerms();
 
   const { ref, height } = useElementSize(); // Custom Hook to calculate height
@@ -122,6 +123,18 @@ const CGPACalculator = () => {
     <>
       {!cgpa.score && !loader ? (
         <>
+          {/* Location Detection Notice */}
+          {isLocationDetected && selectedCountry && (
+            <div className="mb-4 rounded-lg border border-green-200 bg-green-50 p-3 flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-green-600 shrink-0" />
+              <p className="text-sm text-green-800">
+                Calculation mode selected for{' '}
+                <span className="font-bold">{selectedCountry}</span> grading
+                system.
+              </p>
+            </div>
+          )}
+
           <CountrySelector
             selectedCountry={selectedCountry}
             onCountrySelect={handleCountrySelect}

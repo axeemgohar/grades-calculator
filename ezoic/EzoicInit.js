@@ -33,13 +33,13 @@ const EzoicScripts = () => {
         id="ezoic-privacy"
         src="https://the.gatekeeperconsent.com/cmp.min.js"
         data-cfasync="false"
-        strategy="beforeInteractive"
+        strategy="lazyOnload"
       />
       <Script
         id="ezoic-privacy-cmp"
         src="https://cmp.gatekeeperconsent.com/min.js"
         data-cfasync="false"
-        strategy="beforeInteractive"
+        strategy="lazyOnload"
       />
 
       {/* Ezoic Main Script */}
