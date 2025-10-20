@@ -2016,4 +2016,34 @@ export const countryData = {
       },
     },
   },
+  Chile: {
+    code: 'CL',
+    name: 'Chile',
+    terms: {
+      semesterGPA: 'Promedio Semestral',
+      semesterCredits: 'Créditos',
+      calculateCGPA: 'Calcular Promedio Ponderado Acumulado (PPA)',
+      addSemester: 'Añadir Semestre',
+      deleteSemester: 'Eliminar Semestre',
+      placeholderGPA: 'Promedio Semestral {{n}}',
+      placeholderCredits: 'Créditos {{n}}',
+      resultCGPA: 'Su PPA (Promedio General)',
+      resultTotalSemesters: 'Total de Semestres',
+      resultTotalCredits: 'Total de Créditos',
+    },
+    example: {
+      semester1: {
+        gpa: 5.5,
+        credits: 30,
+        GPATerm: 'Promedio Semestral 1',
+        creditsTerm: 'Créditos',
+      },
+      semester2: {
+        gpa: 6.2,
+        credits: 30,
+        GPATerm: 'Promedio Semestral 2',
+        creditsTerm: 'Créditos',
+      },
+    },
+  },
 };
