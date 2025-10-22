@@ -1,6 +1,7 @@
-import USAGPACalculator from './components/NZGPACalculator';
-import USAContent from './components/NZContent';
+import NZGPACalculator from './components/NZGPACalculator';
+import NZContent from './components/NZContent';
 import RelatedLinks from '@/utils/RelatedLinks';
+import NZGPACalculatorSchema from '@/JSON-LD Schemas/NZGPACalculatorSchema';
 
 export const metadata = {
   title: 'Simple NZ GPA Calculator',
@@ -23,14 +24,15 @@ const USA = () => {
         </h2>
         <p className="text-slate-600 mb-6">Add each paper and its details.</p>
 
-        <USAGPACalculator />
+        <NZGPACalculator />
       </section>
       <RelatedLinks />
 
       {/* Info Section */}
       <div className="bg-white mt-8">
-        <USAContent />
+        <NZContent />
       </div>
+      <NZGPACalculatorSchema />
     </div>
   );
 };
