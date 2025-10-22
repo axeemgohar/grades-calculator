@@ -336,7 +336,7 @@ export const countryData = {
     },
   },
   'United Arab Emirates': {
-    code: 'AE',
+    code: 'AE-AR',
     name: 'United Arab Emirates',
     terms: {
       semesterGPA: 'المعدل الفصلي',
@@ -366,7 +366,7 @@ export const countryData = {
     },
   },
   'United Arab Emirates (English)': {
-    code: 'AE-EN',
+    code: 'AE',
     name: 'United Arab Emirates (English)',
     terms: {
       semesterGPA: 'Semester GPA (out of 4.0)',
@@ -2043,6 +2043,66 @@ export const countryData = {
         credits: 30,
         GPATerm: 'Promedio Semestral 2',
         creditsTerm: 'Créditos',
+      },
+    },
+  },
+  Mexico: {
+    code: 'MX',
+    name: 'Mexico',
+    terms: {
+      semesterGPA: 'Promedio Semestral',
+      semesterCredits: 'Créditos',
+      calculateCGPA: 'Calcular Promedio Acumulado',
+      addSemester: 'Añadir Semestre',
+      deleteSemester: 'Eliminar Semestre',
+      placeholderGPA: 'Promedio Semestral {{n}}',
+      placeholderCredits: 'Créditos {{n}}',
+      resultCGPA: 'Su Promedio General',
+      resultTotalSemesters: 'Total de Semestres',
+      resultTotalCredits: 'Total de Créditos',
+    },
+    example: {
+      semester1: {
+        gpa: 8.5,
+        credits: 25,
+        GPATerm: 'Promedio Semestral 1',
+        creditsTerm: 'Créditos',
+      },
+      semester2: {
+        gpa: 9.2,
+        credits: 24,
+        GPATerm: 'Promedio Semestral 2',
+        creditsTerm: 'Créditos',
+      },
+    },
+  },
+  Colombia: {
+    code: 'CO',
+    name: 'Colombia',
+    terms: {
+      semesterGPA: 'Promedio Semestral',
+      semesterCredits: 'Créditos Académicos',
+      calculateCGPA: 'Calcular Promedio Ponderado Acumulado (PPA)',
+      addSemester: 'Añadir Semestre',
+      deleteSemester: 'Eliminar Semestre',
+      placeholderGPA: 'Promedio Semestral {{n}}',
+      placeholderCredits: 'Créditos Académicos {{n}}',
+      resultCGPA: 'Su PPA (Promedio General)',
+      resultTotalSemesters: 'Total de Semestres',
+      resultTotalCredits: 'Total de Créditos Académicos',
+    },
+    example: {
+      semester1: {
+        gpa: 4.1,
+        credits: 16,
+        GPATerm: 'Promedio Semestral 1',
+        creditsTerm: 'Créditos Académicos',
+      },
+      semester2: {
+        gpa: 4.5,
+        credits: 18,
+        GPATerm: 'Promedio Semestral 2',
+        creditsTerm: 'Créditos Académicos',
       },
     },
   },

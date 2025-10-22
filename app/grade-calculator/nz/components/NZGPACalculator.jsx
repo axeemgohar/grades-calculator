@@ -25,7 +25,7 @@ import printerLoader from '@/public/assets/loader/Printer-Loader.json'; // Refer
 import { paperListSchemaNZ } from '@/lib/validationSchemas';
 
 // Initial state for the course list, adapted to NZ terminology
-const paperList = Array.from({ length: 5 }, (_, i) => ({
+const paperList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
   name: '',
   grade: '',
@@ -246,7 +246,7 @@ const NZGPACalculator = () => {
               </Button>
             </div>
             <Button className=" flex-1" type="submit">
-              Calculate NZ GPA
+              Calculate GPA
             </Button>
           </div>
         </form>

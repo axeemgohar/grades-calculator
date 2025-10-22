@@ -95,7 +95,6 @@ const NZContent = () => {
           </p>
         </div>
       </section>
-
       {/* */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -219,17 +218,14 @@ const NZContent = () => {
           score.
         </p>
       </section>
-
       {/* Mobile Version */}
-      <div className="lg:hidden mb-8">
+      {/* <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-117"></div>
-      </div>
-
+      </div> */}
       {/* Desktop Version */}
-      <div className="max-lg:hidden mb-8">
+      {/* <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-120"></div>
-      </div>
-
+      </div> */}
       {/* */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -297,17 +293,14 @@ const NZContent = () => {
           </div>
         </div>
       </section>
-
       {/* Mobile Version */}
-      <div className="lg:hidden mb-8">
+      {/* <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-118"></div>
-      </div>
-
+      </div> */}
       {/* Desktop Version */}
-      <div className="max-lg:hidden mb-8">
+      {/* <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-121"></div>
-      </div>
-
+      </div> */}
       {/* */}
       <section className="bg-indigo-50 rounded-lg border border-indigo-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -361,7 +354,6 @@ const NZContent = () => {
           </article>
         </div>
       </section>
-
       {/* */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -412,7 +404,6 @@ const NZContent = () => {
           </li>
         </ul>
       </section>
-
       {/* */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -473,17 +464,14 @@ const NZContent = () => {
           </dl>
         </div>
       </section>
-
       {/* Mobile Version */}
-      <div className="lg:hidden mb-8">
+      {/* {/* <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-119"></div>
-      </div>
-
+      </div> */}{' '}
       {/* Desktop Version */}
-      <div className="max-lg:hidden mb-8">
+      {/* <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-122"></div>
-      </div>
-
+      </div> */}
       {/* */}
       <div className="text-center p-6 bg-indigo-600 rounded-lg text-white">
         <h3 className="text-xl font-bold mb-2">

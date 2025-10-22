@@ -92,7 +92,6 @@ const USAContent = () => {
           </p>
         </div>
       </section>
-
       {/* <!-- GPA Scale Section --> */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -186,17 +185,14 @@ const USAContent = () => {
           GPA.
         </p>
       </section>
-
       {/* Mobile Version */}
-      <div className="lg:hidden mb-8">
+      {/* <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-117"></div>
-      </div>
-
+      </div> */}
       {/* Desktop Version */}
-      <div className="max-lg:hidden mb-8">
+      {/* <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-120"></div>
-      </div>
-
+      </div> */}
       {/* <!-- Credits Section --> */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -271,7 +267,6 @@ const USAContent = () => {
           </p>
         </aside>
       </section>
-
       {/* <!-- Grades Section --> */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -359,17 +354,14 @@ const USAContent = () => {
           </p>
         </aside>
       </section>
-
       {/* Mobile Version */}
-      <div className="lg:hidden mb-8">
+      {/* <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-118"></div>
-      </div>
-
+      </div> */}
       {/* Desktop Version */}
-      <div className="max-lg:hidden mb-8">
+      {/* <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-121"></div>
-      </div>
-
+      </div> */}
       {/* <!-- Why GPA Matters --> */}
       <section className="bg-indigo-50 rounded-lg border border-indigo-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -418,7 +410,6 @@ const USAContent = () => {
           </article>
         </div>
       </section>
-
       {/* <!-- Tips Section --> */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -467,7 +458,6 @@ const USAContent = () => {
           </li>
         </ul>
       </section>
-
       {/* <!-- FAQ Section --> */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
@@ -564,15 +554,13 @@ const USAContent = () => {
         </div>
       </section>
       {/* Mobile Version */}
-      <div className="lg:hidden mb-8">
+      {/* {/* <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-119"></div>
-      </div>
-
+      </div> */}{' '}
       {/* Desktop Version */}
-      <div className="max-lg:hidden mb-8">
+      {/* <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-122"></div>
-      </div>
-
+      </div> */}
       {/* <!-- Call to Action --> */}
       <div className="text-center p-6 bg-primary rounded-lg text-white">
         <h3 className="text-xl font-bold mb-2">

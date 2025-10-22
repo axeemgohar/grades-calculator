@@ -20,7 +20,7 @@ import useElementSize from '@/utils/useElementSize';
 import Lottie from 'react-lottie-player/dist/LottiePlayerLight';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 
-const courseList = Array.from({ length: 5 }, (_, i) => ({
+const courseList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
   name: '',
   grade: '',

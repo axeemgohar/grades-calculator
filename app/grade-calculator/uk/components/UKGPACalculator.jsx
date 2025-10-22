@@ -12,7 +12,7 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 import { calculateDegreeClassification } from '@/lib/calculations/uk-degree';
 
-const moduleList = Array.from({ length: 5 }, (_, i) => ({
+const moduleList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
   name: '',
   mark: '',
