@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Camera, Share2 } from 'lucide-react';
+import { Camera } from 'lucide-react';
 import { toPng } from 'html-to-image';
 
 const ShareResult = ({ gpa }) => {
@@ -122,7 +122,10 @@ const ShareResult = ({ gpa }) => {
         {isGenerating ? (
           <div className="animate-spin w-4 h-4 border-2 border-current border-t-transparent rounded-full " />
         ) : (
-          <Share2 size={24} className="!h-7 !w-7 text-indigo-600" />
+          <Camera
+            size={24}
+            className="!h-7 !w-7  text-indigo-600 animate-bounce"
+          />
         )}
         {isGenerating ? 'Generating...' : ''}
       </Button>
