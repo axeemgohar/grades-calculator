@@ -102,15 +102,17 @@ const UKDCCalculator = () => {
     <>
       {!degreeClassification.score && !loader ? (
         <form onSubmit={calculateCurrentDC}>
-          <div className="grid border border-indigo-500/50 bg-indigo-300/10 grid-cols-12 rounded-t items-center">
-            <div className="col-span-6 py-4 ps-3">
-              <h4 className="font-semibold text-slate-700">Module Name</h4>
+          <div className="grid border border-indigo-500/50 bg-indigo-300/10 grid-cols-12 rounded-t">
+            <div className="col-span-6 py-4 ps-3 flex items-center">
+              <h4 className="font-semibold text-slate-700">
+                Module Name (optional)
+              </h4>
             </div>
-            <div className="col-span-3 py-4 border-0 border-x border-indigo-500/50 ps-3">
+            <div className="col-span-3 py-4 border-0 border-x border-indigo-500/50 ps-3 flex items-center">
               <h4 className="font-semibold text-slate-700">Credits</h4>
             </div>
-            <div className="col-span-3 py-4 ps-3">
-              <h4 className="font-semibold text-slate-700">Mark (%)</h4>
+            <div className="col-span-3 py-4 ps-3  flex items-center">
+              <h4 className="font-semibold text-slate-700">Grade / Mark (%)</h4>
             </div>
           </div>
 

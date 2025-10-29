@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 
 import { RotateCcw } from 'lucide-react';
+import Link from 'next/link';
 
 const DisplayResult = ({ degreeClassification, onRecalculateDC }) => {
   return (
@@ -42,11 +43,19 @@ const DisplayResult = ({ degreeClassification, onRecalculateDC }) => {
           </div>
         </div>
       </output>
-      <div className="text-center ">
-        <Button className="mt-6   !px-12 h-10" onClick={onRecalculateDC}>
+
+      <div className="text-center flex mt-6 sm:gap-6 justify-center max-sm:flex-col gap-4 ">
+        <Button className="!px-12 h-10" onClick={onRecalculateDC}>
           <RotateCcw className="text-white" size={20} strokeWidth={2.5} />
           Calculate Again
         </Button>
+        <Link
+          prefetch={false}
+          href="/grade-calculator/cgpa-to-gpa"
+          className=" !px-12 h-10 bg-white text-indigo-600 !shadow-md border border-indigo-400 hover:bg-indigo-50 rounded-sm flex items-center justify-center gap-2"
+        >
+          Convert to 4.0 GPA
+        </Link>
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { getGPADescription } from '@/lib/calculations/usa-gpa';
-import { RotateCcw } from 'lucide-react';
+import { Percent, RotateCcw } from 'lucide-react';
+import Link from 'next/link';
 
 const DisplayResult = ({ gpa, onRecalculate }) => {
   return (
@@ -41,11 +42,19 @@ const DisplayResult = ({ gpa, onRecalculate }) => {
           </div>
         </div>
       </output>
-      <div className="text-center ">
-        <Button className="mt-6   !px-12 h-10" onClick={onRecalculate}>
+      <div className="text-center flex mt-6 sm:gap-6 justify-center max-sm:flex-col gap-4 ">
+        <Button className="!px-12 h-10" onClick={onRecalculate}>
           <RotateCcw className="text-white" size={20} strokeWidth={2.5} />
           Calculate Again
         </Button>
+        <Link
+          prefetch={false}
+          href="/grade-calculator/cgpa-percentage"
+          className=" !px-12 h-10 bg-white text-indigo-600 !shadow-md border border-indigo-400 hover:bg-indigo-50 rounded-sm flex items-center justify-center gap-2"
+        >
+          Convert to Percentage
+          <Percent size={20} strokeWidth={2} />
+        </Link>
       </div>
     </>
   );

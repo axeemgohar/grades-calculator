@@ -1,7 +1,8 @@
 // components/DisplayResultNZ.jsx
 import { Button } from '@/components/ui/button';
 import { getNZGPADescription } from '@/lib/calculations/new-zealand-gpa';
-import { RotateCcw } from 'lucide-react';
+import { Percent, RotateCcw } from 'lucide-react';
+import Link from 'next/link';
 
 const DisplayResultNZ = ({ gpa, onRecalculate }) => {
   const totalPapers = gpa.totalPapers || 0;
@@ -87,14 +88,22 @@ const DisplayResultNZ = ({ gpa, onRecalculate }) => {
       </output>
 
       {/* Recalculate Button */}
-      <div className="text-center">
+      <div className="text-center flex mt-6 sm:gap-6 justify-center max-sm:flex-col gap-4 ">
         <Button
-          className="mt-6 !px-12 h-10 bg-indigo-600 hover:bg-indigo-700 text-white shadow-md transition-all duration-200 ease-in-out"
+          className="!px-12 h-10 bg-indigo-600 hover:bg-indigo-700 text-white shadow-md transition-all duration-200 ease-in-out"
           onClick={onRecalculate}
         >
           <RotateCcw className="mr-2" size={18} strokeWidth={2.5} />
           Recalculate GPA
         </Button>
+        <Link
+          prefetch={false}
+          href="/grade-calculator/cgpa-percentage"
+          className=" !px-12 h-10 bg-white text-indigo-600 !shadow-md border border-indigo-400 hover:bg-indigo-50 rounded-sm flex items-center justify-center gap-2"
+        >
+          Convert to Percentage
+          <Percent size={20} strokeWidth={2} />
+        </Link>
       </div>
     </>
   );

@@ -70,8 +70,12 @@ const CGPAtoGPACalculator = () => {
 
     setResult({
       score: calculatedResult,
-      currentScale: customCurrentScale || currentScale,
-      targetScale: customTargetScale || targetScale,
+      currentScale:
+        customCurrentScale ||
+        gradingScales.find((scale) => scale.value === currentScale)?.label,
+      targetScale:
+        customTargetScale ||
+        gradingScales.find((scale) => scale.value === targetScale)?.label,
     });
 
     setLoader(true);
@@ -108,7 +112,7 @@ const CGPAtoGPACalculator = () => {
               htmlFor="cgpa"
               className="block text-sm font-medium text-slate-700 mb-2"
             >
-              Enter Your CGPA/GPA
+              Enter Your CGPA/GPA/Percentage
             </label>
             <Input
               type="number"
