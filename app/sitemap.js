@@ -5,24 +5,75 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
+      alternates: {
+        languages: {
+          en: 'https://calculatecgpa.com/',
+          'en-US': 'https://calculatecgpa.com/grade-calculator/us',
+          'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
+          'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
+          'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+        },
+      },
     },
     {
       url: 'https://www.calculatecgpa.com/grade-calculator/us',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+      alternates: {
+        languages: {
+          en: 'https://calculatecgpa.com/',
+          'en-US': 'https://calculatecgpa.com/grade-calculator/us',
+          'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
+          'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
+          'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+        },
+      },
     },
     {
       url: 'https://www.calculatecgpa.com/grade-calculator/uk',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+      alternates: {
+        languages: {
+          en: 'https://calculatecgpa.com/',
+          'en-US': 'https://calculatecgpa.com/grade-calculator/us',
+          'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
+          'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
+          'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+        },
+      },
     },
     {
       url: 'https://www.calculatecgpa.com/grade-calculator/nz',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+      alternates: {
+        languages: {
+          en: 'https://calculatecgpa.com/',
+          'en-US': 'https://calculatecgpa.com/grade-calculator/us',
+          'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
+          'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
+          'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+        },
+      },
+    },
+    {
+      url: 'https://www.calculatecgpa.com/grade-calculator/ch',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+      alternates: {
+        languages: {
+          en: 'https://calculatecgpa.com/',
+          'en-US': 'https://calculatecgpa.com/grade-calculator/us',
+          'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
+          'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
+          'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+        },
+      },
     },
     {
       url: 'https://www.calculatecgpa.com/grade-calculator/cgpa-percentage',

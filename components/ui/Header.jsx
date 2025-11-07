@@ -42,6 +42,11 @@ const Header = () => {
       description: 'Calculate New Zealand GPA (9-point scale)',
     },
     {
+      label: 'Notenrechner Schweiz',
+      href: '/grade-calculator/ch',
+      description: 'Berechne Deine gewichtete Note (1.0 bis 6.0 Skala)',
+    },
+    {
       label: 'CGPA to Percentage',
       href: '/grade-calculator/cgpa-percentage',
       description: 'Convert CGPA to percentage and Percentage to CGPA',

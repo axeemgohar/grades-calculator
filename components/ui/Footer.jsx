@@ -5,6 +5,10 @@ const calculatorLinks = [
   { label: 'UK DC Calculator', href: '/grade-calculator/uk' },
   { label: 'US GPA Calculator', href: '/grade-calculator/us' },
   { label: 'NZ GPA Calculator', href: '/grade-calculator/nz' },
+  {
+    label: 'Notenrechner Schweiz',
+    href: '/grade-calculator/ch',
+  },
   { label: 'CGPA to Percentage', href: '/grade-calculator/cgpa-percentage' },
   { label: 'CGPA to GPA', href: '/grade-calculator/cgpa-to-gpa' },
 ];

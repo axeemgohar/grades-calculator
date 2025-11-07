@@ -24,6 +24,14 @@ export const metadata = {
   openGraph: {
     images: '/opengraph-image.png',
   },
+  languages: {
+    en: 'https://calculatecgpa.com/',
+    'en-US': 'https://calculatecgpa.com/grade-calculator/us',
+    'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
+    'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
+    'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+    'x-default': 'https://calculatecgpa.com/',
+  },
 };
 
 export default function RootLayout({ children }) {

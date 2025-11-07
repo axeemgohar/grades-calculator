@@ -4,7 +4,6 @@ import {
   ChartColumnBig,
   CircleQuestionMark,
   Clipboard,
-  Search,
   Sun,
   Zap,
 } from 'lucide-react';

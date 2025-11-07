@@ -10,6 +10,14 @@ export const metadata = {
   alternates: {
     canonical: 'https://calculatecgpa.com/grade-calculator/uk',
   },
+  languages: {
+    en: 'https://calculatecgpa.com/',
+    'en-US': 'https://calculatecgpa.com/grade-calculator/us',
+    'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
+    'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
+    'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+    'x-default': 'https://calculatecgpa.com/',
+  },
 };
 
 const USA = () => {
