@@ -10,16 +10,18 @@ const DisplayResultNZ = ({ gpa, onRecalculate }) => {
 
   // Function to map the descriptive text to a formal Honours Class for display
   const getHonoursClassification = (description) => {
-    if (description.includes('Outstanding')) {
-      return 'First Class Honours (Approx.)';
-    }
-    if (description.includes('Excellent')) {
-      return 'Second Class Honours (First Division)';
+    if (
+      description.includes('Outstanding') ||
+      description.includes('Excellent')
+    ) {
+      return 'First Class Honours';
     }
     if (description.includes('Very Good')) {
+      return 'Second Class Honours (First Division)';
+    }
+    if (description.includes('Good')) {
       return 'Second Class Honours (Second Division)';
     }
-    // For "Good", "Adequate", and "Below Standard"
     return 'Pass/No Honours Classification';
   };
 
