@@ -179,8 +179,8 @@ export default function BlooketPackSimulator() {
         {/* Footer Info */}
         <footer className="mt-12 text-center text-gray-500 text-sm max-sm:mt-8">
           <p>
-            💡 Tip: Uncheck "Open one at a time" to spend all your coins on
-            multiple packs!
+            💡 Tip: Uncheck &quot;Open one at a time &quot; to spend all your
+            coins on multiple packs!
           </p>
         </footer>
       </div>
