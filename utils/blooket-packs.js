@@ -376,11 +376,19 @@ export const packsData = {
         },
         {
           name: 'Crocodile',
+          rarity: 'Epic',
+          dropRatePct: 3.6,
+          salePrice: 75,
+          blookScore: 20,
+          poster: '/assets/blooket/blooks/outback/crocodile.svg',
+        },
+        {
+          name: 'Sugar Glider',
           rarity: 'Legendary',
           dropRatePct: 0.37,
           salePrice: 200,
           blookScore: 35,
-          poster: '/assets/blooket/blooks/outback/crocodile.svg',
+          poster: '/assets/blooket/blooks/outback/sugarglider.svg',
         },
       ],
     },
@@ -423,12 +431,12 @@ export const packsData = {
           poster: '/assets/blooket/blooks/ice/rockmonster.svg',
         },
         {
-          name: 'Ding',
+          name: 'Dink',
           rarity: 'Rare',
           dropRatePct: 8.5,
           salePrice: 20,
           blookScore: 10,
-          poster: '/assets/blooket/blooks/ice/ding.svg',
+          poster: '/assets/blooket/blooks/ice/dink.svg',
         },
         {
           name: 'Donk',
@@ -524,7 +532,7 @@ export const packsData = {
           dropRatePct: 0.3,
           salePrice: 200,
           blookScore: 35,
-          poster: '/assets/blooket/blooks/dino/tyrannosaurus.svg',
+          poster: '/assets/blooket/blooks/dino/tyrannosaurusrex.svg',
         },
       ],
     },
@@ -548,7 +556,7 @@ export const packsData = {
           dropRatePct: 15.0,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/dino/sloth.svg',
+          poster: '/assets/blooket/blooks/safari/sloth.svg',
         },
         {
           name: 'Tenrec',
@@ -556,7 +564,7 @@ export const packsData = {
           dropRatePct: 15.0,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/dino/tenrec.svg',
+          poster: '/assets/blooket/blooks/safari/tenrec.svg',
         },
         {
           name: 'Flamingo',
@@ -564,7 +572,7 @@ export const packsData = {
           dropRatePct: 15.0,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/dino/flamingo.svg',
+          poster: '/assets/blooket/blooks/safari/flamingo.svg',
         },
         {
           name: 'Zebra',
@@ -572,7 +580,7 @@ export const packsData = {
           dropRatePct: 15.0,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/dino/zebra.svg',
+          poster: '/assets/blooket/blooks/safari/zebra.svg',
         },
         {
           name: 'Elephant',
@@ -580,7 +588,7 @@ export const packsData = {
           dropRatePct: 7,
           salePrice: 20,
           blookScore: 10,
-          poster: '/assets/blooket/blooks/dino/elephant.svg',
+          poster: '/assets/blooket/blooks/safari/elephant.svg',
         },
         {
           name: 'Lemur',
@@ -588,7 +596,7 @@ export const packsData = {
           dropRatePct: 7,
           salePrice: 20,
           blookScore: 10,
-          poster: '/assets/blooket/blooks/dino/lemur.svg',
+          poster: '/assets/blooket/blooks/safari/lemur.svg',
         },
         {
           name: 'Peacock',
@@ -596,7 +604,7 @@ export const packsData = {
           dropRatePct: 7,
           salePrice: 20,
           blookScore: 10,
-          poster: '/assets/blooket/blooks/dino/peacock.svg',
+          poster: '/assets/blooket/blooks/safari/peacock.svg',
         },
         {
           name: 'Chameleon',
@@ -604,7 +612,7 @@ export const packsData = {
           dropRatePct: 3.48,
           salePrice: 75,
           blookScore: 20,
-          poster: '/assets/blooket/blooks/dino/chameleon.svg',
+          poster: '/assets/blooket/blooks/safari/chameleon.svg',
         },
         {
           name: 'Lion',
@@ -612,7 +620,7 @@ export const packsData = {
           dropRatePct: 0.5,
           salePrice: 200,
           blookScore: 35,
-          poster: '/assets/blooket/blooks/dino/lion.svg',
+          poster: '/assets/blooket/blooks/safari/lion.svg',
         },
       ],
     },
@@ -816,7 +824,7 @@ export const packsData = {
           dropRatePct: 18.75,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/bot/meteor.svg',
+          poster: '/assets/blooket/blooks/space/meteor.svg',
         },
         {
           name: 'Stars',
@@ -824,7 +832,7 @@ export const packsData = {
           dropRatePct: 18.75,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/bot/stars.svg',
+          poster: '/assets/blooket/blooks/space/stars.svg',
         },
         {
           name: 'Alien',
@@ -832,7 +840,7 @@ export const packsData = {
           dropRatePct: 18.75,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/bot/alien.svg',
+          poster: '/assets/blooket/blooks/space/alien.svg',
         },
         {
           name: 'Planet',
@@ -840,7 +848,7 @@ export const packsData = {
           dropRatePct: 10,
           salePrice: 20,
           blookScore: 10,
-          poster: '/assets/blooket/blooks/bot/planet.svg',
+          poster: '/assets/blooket/blooks/space/planet.svg',
         },
         {
           name: 'UFO',
@@ -848,7 +856,7 @@ export const packsData = {
           dropRatePct: 10,
           salePrice: 20,
           blookScore: 10,
-          poster: '/assets/blooket/blooks/bot/ufo.svg',
+          poster: '/assets/blooket/blooks/space/ufo.svg',
         },
         {
           name: 'Spaceship',
@@ -856,7 +864,7 @@ export const packsData = {
           dropRatePct: 4.5,
           salePrice: 75,
           blookScore: 20,
-          poster: '/assets/blooket/blooks/bot/spaceship.svg',
+          poster: '/assets/blooket/blooks/space/spaceship.svg',
         },
 
         {
@@ -865,7 +873,7 @@ export const packsData = {
           dropRatePct: 0.45,
           salePrice: 200,
           blookScore: 75,
-          poster: '/assets/blooket/blooks/bot/astronaut.svg',
+          poster: '/assets/blooket/blooks/space/astronaut.svg',
         },
       ],
     },
@@ -940,12 +948,12 @@ export const packsData = {
           poster: '/assets/blooket/blooks/medieval/unicorn.svg',
         },
         {
-          name: 'Unicorn',
+          name: 'King',
           rarity: 'Legendary',
           dropRatePct: 1.0,
           salePrice: 200,
           blookScore: 35,
-          poster: '/assets/blooket/blooks/medieval/unicorn.svg',
+          poster: '/assets/blooket/blooks/medieval/King.svg',
         },
       ],
     },
@@ -969,7 +977,7 @@ export const packsData = {
           dropRatePct: 15,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/wonderland/eatme.svg',
+          poster: '/assets/blooket/blooks/wonderland/eat.svg',
         },
         {
           name: 'Drink Me',
@@ -977,7 +985,7 @@ export const packsData = {
           dropRatePct: 15,
           salePrice: 5,
           blookScore: 5,
-          poster: '/assets/blooket/blooks/wonderland/drinkme.svg',
+          poster: '/assets/blooket/blooks/wonderland/drink.svg',
         },
         {
           name: 'Alice',
