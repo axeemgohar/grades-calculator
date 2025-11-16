@@ -5,10 +5,19 @@ import Image from 'next/image';
 export default function BlookCard({ blook, isDuplicate }) {
   return (
     <div
-      className={`flex-shrink-0 w-48 bg-white rounded-xl shadow-xs overflow-hidden border ${
+      className={`flex-shrink-0 w-48 bg-white rounded-xl shadow-xs overflow-hidden border relative ${
         isDuplicate ? 'opacity-80' : 'border-gray-200'
       } hover:scale-105 transition-transform relative`}
     >
+      {['Epic', 'Legendary', 'Chroma'].includes(blook.rarity) && (
+        <span className="flex size-full absolute -left-1 -top-1 0">
+          <span
+            className={`"absolute inline-flex h-full w-full animate-ping animation-duration-2000 rounded-full ${
+              RARITY_COLORS[blook.rarity]
+            } opacity-75`}
+          ></span>
+        </span>
+      )}
       {isDuplicate && (
         <div className="absolute top-3 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">
           DUPLICATE

@@ -24,7 +24,7 @@ export default function BlooketPackSimulator() {
   const handleCoinsChange = (e) => {
     const value = e.target.value;
     if (value === '' || parseInt(value) < 0) {
-      setCoins(0);
+      setCoins('');
     } else {
       setCoins(parseInt(value));
     }
@@ -182,6 +182,9 @@ export default function BlooketPackSimulator() {
             💡 Tip: Uncheck &quot;Open one at a time &quot; to spend all your
             coins on multiple packs!
           </p>
+          <span className="mt-4 block bg-indigo-100 px-4 sm:px-8 py-3 rounded-md text-indigo-700 font-medium w-max mx-auto">
+            Blook Guarantee Predictor • Coming Soon!
+          </span>
         </footer>
       </div>
 

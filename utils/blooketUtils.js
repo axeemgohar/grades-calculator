@@ -1,6 +1,8 @@
 // Probability Engine - Weighted Random Selection
 export const selectRandomBlook = (blooks) => {
-  const random = Math.random() * 100;
+  const totalWeight = blooks.reduce((sum, blook) => sum + blook.dropRatePct, 0);
+
+  const random = Math.random() * totalWeight;
   let cumulative = 0;
 
   for (const blook of blooks) {
@@ -84,11 +86,13 @@ export const RARITY_COLORS = {
   Rare: 'bg-blue-400',
   Epic: 'bg-purple-400',
   Legendary: 'bg-yellow-400',
+  Chroma: 'bg-red-400',
 };
 
 export const RARITY_TEXT_COLORS = {
   Uncommon: 'text-green-600',
   Rare: 'text-blue-600',
   Epic: 'text-purple-600',
-  Legendary: 'text-yellow-600',
+  Legendary: 'text-yellow-400',
+  Chroma: 'text-red-600',
 };
