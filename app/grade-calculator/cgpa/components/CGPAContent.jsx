@@ -147,14 +147,14 @@ const CGPAContent = () => {
         </div>
       </section>
       {/* Mobile Version */}
-      {/* <div className="lg:hidden mb-8">
+      <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-117"></div>
-      </div> */}
+      </div>
 
       {/* Desktop Version */}
-      {/* <div className="max-lg:hidden mb-8">
+      <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-120"></div>
-      </div> */}
+      </div>
 
       {/* <!-- Credits Section --> */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8">
@@ -312,14 +312,14 @@ const CGPAContent = () => {
         </div>
       </section>
       {/* Mobile Version */}
-      {/* <div className="lg:hidden mb-8">
+      <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-118"></div>
-      </div> */}
+      </div>
 
       {/* Desktop Version */}
-      {/* <div className="max-lg:hidden mb-8">
+      <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-121"></div>
-      </div> */}
+      </div>
 
       {/* <!-- Tips Section --> */}
       <section className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 md:p-8 mb-8 mt-8">
@@ -454,14 +454,14 @@ const CGPAContent = () => {
       </section>
 
       {/* Mobile Version */}
-      {/* <div className="lg:hidden mb-8">
+      <div className="lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-119"></div>
-      </div> */}
+      </div>
 
       {/* Desktop Version */}
-      {/* <div className="max-lg:hidden mb-8">
+      <div className="max-lg:hidden mb-8">
         <div id="ezoic-pub-ad-placeholder-122"></div>
-      </div> */}
+      </div>
 
       {/* <!-- Call to Action --> */}
       <div className="text-center p-6 bg-primary rounded-lg text-white">

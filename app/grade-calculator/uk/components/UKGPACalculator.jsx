@@ -22,7 +22,7 @@ const UKDCCalculator = () => {
   const [modules, setmodules] = useState(moduleList);
   const [loader, setLoader] = useState(false);
   const [degreeClassification, setdegreeClassification] = useState({
-    score: 0,
+    score: null,
     totalModules: 0,
     classification: '',
   });
@@ -91,7 +91,7 @@ const UKDCCalculator = () => {
 
   const reCalculateDC = () => {
     setdegreeClassification({
-      score: 0,
+      score: null,
       totalModules: 0,
       classification: '',
     });
@@ -100,7 +100,7 @@ const UKDCCalculator = () => {
   console.log(modules);
   return (
     <>
-      {!degreeClassification.score && !loader ? (
+      {degreeClassification.score === null && !loader ? (
         <form onSubmit={calculateCurrentDC}>
           <div className="grid border border-indigo-500/50 bg-indigo-300/10 grid-cols-12 rounded-t">
             <div className="col-span-6 py-4 ps-3 flex items-center">

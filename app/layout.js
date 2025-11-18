@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
 
         <Toaster position="top-right" />
         <GoogleTagManager gtmId="GTM-MPPN39V" />
-        {/* <EzoicScripts /> */}
+        <EzoicScripts />
 
         <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6">
           {children}

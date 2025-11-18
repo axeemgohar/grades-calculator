@@ -22,10 +22,10 @@ export default function Home() {
           <CGPACalculator />
         </section>
         <RelatedLinks />
-        {/* 
+
         <div className="max-lg:hidden mb-8">
           <div id="ezoic-pub-ad-placeholder-104"></div>
-        </div> */}
+        </div>
 
         {/* Info Section */}
         <div className="bg-white mt-8">
@@ -87,7 +87,7 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* <div id="ezoic-pub-ad-placeholder-114"></div> */}
+          <div id="ezoic-pub-ad-placeholder-114"></div>
         </div>
       </aside>
       <CGPACalculatorSchema />
