@@ -97,7 +97,6 @@ const UKDCCalculator = () => {
     });
   };
 
-  console.log(modules);
   return (
     <>
       {degreeClassification.score === null && !loader ? (

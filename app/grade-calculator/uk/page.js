@@ -23,7 +23,7 @@ export const metadata = {
 const USA = () => {
   return (
     <div className="lg:col-span-2">
-      <section className="bg-white rounded-lg md:shadow-xs p-0 md:p-8 md:border">
+      <section className="bg-white rounded-lg md:shadow-xs p-0 md:p-8 md:border mb-8">
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 md:mb-6 flex items-center bg-gradient-to-b from-indigo-500 to-indigo-700 bg-clip-text text-transparent">
           UK Degree Calculator
         </h1>
@@ -35,6 +35,9 @@ const USA = () => {
         <UKDCCalculator />
       </section>
       <RelatedLinks />
+      <div className="max-lg:hidden mb-8">
+        <div id="ezoic-pub-ad-placeholder-104"></div>
+      </div>
 
       {/* Info Section */}
       <div className="bg-white mt-8">
