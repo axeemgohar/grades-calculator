@@ -10,6 +10,7 @@ import {
   sellDuplicatesAndReopen,
 } from '@/utils/blooketUtils';
 import { packsData } from '@/utils/blooket-packs';
+import Link from 'next/link';
 
 export default function BlooketPackSimulator() {
   const [coins, setCoins] = useState(600);
@@ -119,9 +120,6 @@ export default function BlooketPackSimulator() {
                 Your Coins:
               </label>
               <div className="relative">
-                {/* <span >
-                  🪙
-                </span> */}
                 <img
                   src="/assets/blooket/Token-DmrosBZF.svg"
                   width={28}
@@ -177,14 +175,13 @@ export default function BlooketPackSimulator() {
         </section>
 
         {/* Footer Info */}
-        <footer className="mt-12 text-center text-gray-500 text-sm max-sm:mt-8">
-          <p>
-            💡 Tip: Uncheck &quot;Open one at a time &quot; to spend all your
-            coins on multiple packs!
-          </p>
-          <span className="mt-4 block bg-indigo-100 px-4 sm:px-8 py-3 rounded-md text-indigo-700 font-medium w-max mx-auto">
-            Blook Guarantee Predictor • Coming Soon!
-          </span>
+        <footer className="mt-12 text-center  max-sm:mt-8">
+          <Link
+            href="/blooket/all-blooks"
+            className="mt-4 block bg-indigo-500 px-4 sm:px-8 py-3 rounded-md text-white font-medium w-max mx-auto shadow-xs"
+          >
+            See All Blooks Unlocked
+          </Link>
         </footer>
       </div>
 

@@ -76,6 +76,18 @@ export default function sitemap() {
       },
     },
     {
+      url: 'https://www.calculatecgpa.com/blooket-simulator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://www.calculatecgpa.com/blooket/all-blooks',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: 'https://www.calculatecgpa.com/grade-calculator/cgpa-percentage',
       lastModified: new Date(),
       changeFrequency: 'weekly',
