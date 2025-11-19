@@ -1081,7 +1081,7 @@ export const packsData = {
           dropRatePct: 1.0,
           salePrice: 200,
           blookScore: 35,
-          poster: '/assets/blooket/blooks/medieval/King.svg',
+          poster: '/assets/blooket/blooks/medieval/king.svg',
         },
       ],
     },
