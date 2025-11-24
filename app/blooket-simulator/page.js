@@ -156,6 +156,13 @@ export default function BlooketPackSimulator() {
               </label>
             </div>
           </div>
+          <div className="mb-4 rounded-md border border-red-200 bg-red-50 p-3">
+            <p className="text-sm text-red-800 text-center">
+              <span className="font-bold">Blizzard Pack</span> is coming around{' '}
+              <span className="font-bold">Dec 3</span>, save up your coins for
+              the Chroma!
+            </p>
+          </div>
           <Link
             href="/blooket/all-blooks"
             className="mt-4 block bg-indigo-500 px-4 sm:px-8 py-3 rounded-md text-white font-medium w-full text-center mx-auto shadow-xs"
