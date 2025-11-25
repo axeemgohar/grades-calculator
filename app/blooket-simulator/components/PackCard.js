@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import { toast } from 'sonner';
 
-export default function PackCard({ pack, coins, onPackClick }) {
+export default function PackCard({ pack, coins, onPackClick, packIndex }) {
   const canAfford = coins >= pack.costTokens;
 
   const handleClick = () => {
@@ -31,6 +31,7 @@ export default function PackCard({ pack, coins, onPackClick }) {
           height={200}
           className="mx-auto  shadow-lg hover:shadow-2xl"
           quality={100}
+          loading={packIndex < 3 ? 'eager' : 'lazy'}
         />
       </div>
       {!canAfford && (

@@ -124,6 +124,7 @@ export default function BlooketPackSimulator() {
                   src="/assets/blooket/Token-DmrosBZF.svg"
                   width={28}
                   height={28}
+                  alt="Coins"
                   className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl"
                 />
                 <input
@@ -177,12 +178,13 @@ export default function BlooketPackSimulator() {
           role="list"
           aria-label="Available blook packs"
         >
-          {packsData.packs.map((pack) => (
+          {packsData.packs.map((pack, index) => (
             <PackCard
               key={pack.packId}
               pack={pack}
               coins={coins}
               onPackClick={handlePackClick}
+              packIndex={index}
             />
           ))}
         </section>
