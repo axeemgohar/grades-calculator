@@ -1,7 +1,7 @@
 import { LinkIcon } from 'lucide-react';
 import Link from 'next/link';
 export const metadata = {
-  title: 'Blooket Pack Opening Simulator - Latest',
+  title: 'Blooket Pack Opening Simulator',
   description:
     'Simulate opening Blooket packs and discover which rare, epic, and legendary blooks you can collect. Free online Blooket pack simulator.',
   alternates: {
@@ -17,7 +17,7 @@ const BlooketPacksLayout = ({ children }) => {
     <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
       <section className="bg-white mb-8 lg:col-span-2 max-lg:mb-4">
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 md:mb-2 flex items-center bg-gradient-to-b from-indigo-500 to-indigo-700 bg-clip-text text-transparent">
-          Blooket Pack Opening Simulator
+          Blooket Pack Simulator
         </h1>
 
         <p className="text-slate-600 mb-2">
