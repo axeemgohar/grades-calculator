@@ -110,7 +110,7 @@ export default function BlooketPackSimulator() {
 
         {/* Controls */}
         <section className=" mb-8">
-          <div className="flex flex-col md:flex-row items-center justify-between max-sm:items-end gap-6 border-b pb-6 mb-6 max-sm:gap-3">
+          <div className="flex flex-col md:flex-row items-center justify-between max-sm:items-end gap-6 border-b pb-6 mb-6 max-sm:gap-3 max-sm:mb-2">
             {/* Coin Input */}
             <div className="flex items-center gap-3 max-sm:justify-end">
               <label
@@ -157,19 +157,27 @@ export default function BlooketPackSimulator() {
               </label>
             </div>
           </div>
-          <div className="mb-4 rounded-md border border-red-200 bg-red-50 p-3">
+          {/* <div className="mb-4 rounded-md border border-red-200 bg-red-50 p-3">
             <p className="text-sm text-red-800 text-center">
               <span className="font-bold">Blizzard Pack</span> is coming around{' '}
               <span className="font-bold">Dec 3</span>, save up your coins for
               the Chroma!
             </p>
+          </div> */}
+          <div className="flex gap-8 max-sm:flex-col max-sm:gap-0">
+            <Link
+              href="/blooket/all-blooks"
+              className="mt-4 block bg-indigo-500 px-4 sm:px-8 py-3 rounded-md text-white font-medium w-full text-center shadow-xs"
+            >
+              Blook Guarantee Predictor
+            </Link>
+            <Link
+              href="/blooket/all-blooks"
+              className="mt-4 block bg-indigo-100 px-4 sm:px-8 py-3 rounded-md text-indigo-700 font-medium w-full border shadow-xs border-indigo-200 text-center"
+            >
+              See All Blooks Unlocked
+            </Link>
           </div>
-          <Link
-            href="/blooket/all-blooks"
-            className="mt-4 block bg-indigo-500 px-4 sm:px-8 py-3 rounded-md text-white font-medium w-full text-center mx-auto shadow-xs"
-          >
-            See All Blooks Unlocked
-          </Link>
         </section>
 
         {/* Pack Grid */}
@@ -195,9 +203,6 @@ export default function BlooketPackSimulator() {
             💡 Tip: Uncheck &quot;Open one at a time &quot; to spend all your
             coins on multiple packs!
           </p>
-          <span className="mt-4 block bg-indigo-100 px-4 sm:px-8 py-3 rounded-md text-indigo-700 font-medium w-max mx-auto">
-            Blook Guarantee Predictor • Coming Soon!
-          </span>
         </footer>
       </div>
 
