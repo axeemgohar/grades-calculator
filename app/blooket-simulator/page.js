@@ -166,7 +166,7 @@ export default function BlooketPackSimulator() {
           </div> */}
           <div className="flex gap-8 max-sm:flex-col max-sm:gap-0">
             <Link
-              href="/blooket/all-blooks"
+              href="/blooket/blooket-pack-calculator"
               className="mt-4 block bg-indigo-500 px-4 sm:px-8 py-3 rounded-md text-white font-medium w-full text-center shadow-xs"
             >
               Blook Guarantee Predictor
