@@ -1,7 +1,6 @@
 // app/blooket-pack-simulator/page.js
 'use client';
-
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import { toast } from 'sonner';
 import PackCard from './components/PackCard';
 import ResultModal from './components/ResultModal';
@@ -21,6 +20,7 @@ export default function BlooketPackSimulator() {
   const [packsOpened, setPacksOpened] = useState(0);
   const [hasSoldDuplicates, setHasSoldDuplicates] = useState(false);
   const [additionalPacksOpened, setAdditionalPacksOpened] = useState(0);
+  const [isPending, startTransition] = useTransition();
 
   const handleCoinsChange = (e) => {
     const value = e.target.value;
@@ -32,66 +32,76 @@ export default function BlooketPackSimulator() {
   };
 
   const handlePackClick = (pack) => {
+    if (coins > 100000 && !openOneAtATime) {
+      toast.error(`Whoa, that's a lot of coins! The limit is 100,000 😄`, {
+        className: 'sonner-toast',
+      });
+      return;
+    }
     setCurrentPack(pack);
     setHasSoldDuplicates(false);
     setAdditionalPacksOpened(0);
 
     if (openOneAtATime) {
-      // Open single pack
+      // Open single pack - no need for transition
       const selectedBlook = selectRandomBlook(pack.blooks);
       setResults([selectedBlook]);
       setPacksOpened(1);
       setCoins((prev) => prev - pack.costTokens);
       toast.success(`Opened 1 ${pack.name}!`, { className: 'sonner-toast' });
+      setModalOpen(true);
     } else {
-      // Open multiple packs until coins run out
-      const openedBlooks = [];
-      let remainingCoins = coins;
-      let count = 0;
+      // Wrap heavy computation in startTransition
+      startTransition(() => {
+        const openedBlooks = [];
+        let remainingCoins = coins;
+        let count = 0;
 
-      while (remainingCoins >= pack.costTokens) {
-        const selectedBlook = selectRandomBlook(pack.blooks);
-        openedBlooks.push(selectedBlook);
-        remainingCoins -= pack.costTokens;
-        count++;
-      }
+        while (remainingCoins >= pack.costTokens) {
+          const selectedBlook = selectRandomBlook(pack.blooks);
+          openedBlooks.push(selectedBlook);
+          remainingCoins -= pack.costTokens;
+          count++;
+        }
 
-      setResults(openedBlooks);
-      setPacksOpened(count);
-      setCoins(remainingCoins);
-      toast.success(`Opened ${count} ${pack.name}${count > 1 ? 's' : ''}!`, {
-        className: 'sonner-toast',
+        setResults(openedBlooks);
+        setPacksOpened(count);
+        setCoins(remainingCoins);
+        toast.success(`Opened ${count} ${pack.name}${count > 1 ? 's' : ''}!`, {
+          className: 'sonner-toast',
+        });
+        setModalOpen(true);
       });
     }
-
-    setModalOpen(true);
   };
 
   const handleSellDuplicates = () => {
-    const { finalBlooks, remainingCoins, totalAdditionalPacks } =
-      sellDuplicatesAndReopen(results, currentPack, coins);
+    startTransition(() => {
+      const { finalBlooks, remainingCoins, totalAdditionalPacks } =
+        sellDuplicatesAndReopen(results, currentPack, coins);
 
-    const duplicatesSold =
-      results.length - new Set(results.map((b) => b.name)).size;
+      const duplicatesSold =
+        results.length - new Set(results.map((b) => b.name)).size;
 
-    toast.success(
-      `Sold duplicates and opened ${totalAdditionalPacks} more pack${
-        totalAdditionalPacks !== 1 ? 's' : ''
-      }!`,
-      { className: 'sonner-toast' }
-    );
+      toast.success(
+        `Sold duplicates and opened ${totalAdditionalPacks} more pack${
+          totalAdditionalPacks !== 1 ? 's' : ''
+        }!`,
+        { className: 'sonner-toast' }
+      );
 
-    setResults(finalBlooks);
-    setCoins(remainingCoins);
-    setHasSoldDuplicates(true);
-    setAdditionalPacksOpened(totalAdditionalPacks);
+      setResults(finalBlooks);
+      setCoins(remainingCoins);
+      setHasSoldDuplicates(true);
+      setAdditionalPacksOpened(totalAdditionalPacks);
 
-    // Check if still have duplicates after all reopening
-    const finalDuplicates =
-      finalBlooks.length - new Set(finalBlooks.map((b) => b.name)).size;
-    if (finalDuplicates > 0) {
-      toast.info('No more coins to eliminate remaining duplicates.');
-    }
+      // Check if still have duplicates after all reopening
+      const finalDuplicates =
+        finalBlooks.length - new Set(finalBlooks.map((b) => b.name)).size;
+      if (finalDuplicates > 0) {
+        toast.info('No more coins to eliminate remaining duplicates.');
+      }
+    });
   };
 
   const handleCloseModal = () => {
@@ -105,6 +115,21 @@ export default function BlooketPackSimulator() {
 
   return (
     <div className="min-h-screen bg-white py-8">
+      {/* Loading Overlay */}
+      {isPending && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-8 flex flex-col items-center gap-4 shadow-2xl">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-indigo-600"></div>
+            <p className="text-xl font-semibold text-gray-800">
+              Opening packs...
+            </p>
+            <p className="text-sm text-gray-500">
+              This may take a moment for large amounts
+            </p>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-7xl mx-auto">
         {/* Header */}
 
@@ -135,6 +160,7 @@ export default function BlooketPackSimulator() {
                   min="0"
                   className="pl-12 pr-4 py-3 w-64 max-sm:w-full text-xl font-bold border-2 border-indigo-500/50 rounded-md focus:outline-none focus:ring-4 focus:ring-indigo-300/50 bg-white"
                   aria-label="Number of coins available"
+                  disabled={isPending}
                 />
               </div>
             </div>
@@ -148,6 +174,7 @@ export default function BlooketPackSimulator() {
                 onChange={(e) => setOpenOneAtATime(e.target.checked)}
                 className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                 aria-label="Open one pack at a time"
+                disabled={isPending}
               />
               <label
                 htmlFor="openOneAtATime"
@@ -193,6 +220,7 @@ export default function BlooketPackSimulator() {
               coins={coins}
               onPackClick={handlePackClick}
               packIndex={index}
+              disabled={isPending}
             />
           ))}
         </section>
@@ -216,6 +244,7 @@ export default function BlooketPackSimulator() {
         onSellDuplicates={handleSellDuplicates}
         hasSoldDuplicates={hasSoldDuplicates}
         additionalPacksOpened={additionalPacksOpened}
+        disabled={isPending}
       />
     </div>
   );
