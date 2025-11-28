@@ -22,7 +22,7 @@ import BlooketResult from './BlooketResult';
 import { packsData } from '@/utils/blooket-packs';
 
 const BlooketGuaranteeCalculator = () => {
-  const [tokens, setTokens] = useState('');
+  const [tokens, setTokens] = useState('2500');
   const [selectedPackId, setSelectedPackId] = useState('');
   const [selectedBlookName, setSelectedBlookName] = useState('');
   const [result, setResult] = useState(null);
