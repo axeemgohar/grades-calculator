@@ -47,6 +47,11 @@ const Header = () => {
       description: 'Berechne Deine gewichtete Note (1.0 bis 6.0 Skala)',
     },
     {
+      label: 'Notendurchschnitt Rechner',
+      href: '/grade-calculator/germany',
+      description: 'Trage deine Fächer, Noten (1-6) und die Gewichtung ein.',
+    },
+    {
       label: 'CGPA to Percentage',
       href: '/grade-calculator/cgpa-percentage',
       description: 'Convert CGPA to percentage and Percentage to CGPA',

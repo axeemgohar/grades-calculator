@@ -12,20 +12,20 @@ const RelatedLinks = () => {
           <ul className="space-y-1 text-indigo-600">
             <li>
               <Link
-                href="/grade-calculator/cgpa-percentage"
+                href="/grade-calculator/ch"
                 className="flex items-center hover:underline"
               >
                 <LinkIcon size={15} className="mr-3" />
-                CGPA to Percentage Calculator
+                Schweiz Notenrechner
               </Link>
             </li>
             <li>
               <Link
-                href="/grade-calculator/cgpa-to-gpa"
+                href="/grade-calculator/germany"
                 className="flex items-center hover:underline"
               >
                 <LinkIcon size={15} className="mr-3" />
-                CGPA to GPA Converter
+                Notendurchschnitt Rechner
               </Link>
             </li>
             <li>

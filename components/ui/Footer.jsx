@@ -9,6 +9,10 @@ const calculatorLinks = [
     label: 'Notenrechner Schweiz',
     href: '/grade-calculator/ch',
   },
+  {
+    label: 'Notendurchschnitt Rechner',
+    href: '/grade-calculator/germany',
+  },
   { label: 'CGPA to Percentage', href: '/grade-calculator/cgpa-percentage' },
   { label: 'CGPA to GPA', href: '/grade-calculator/cgpa-to-gpa' },
 ];
