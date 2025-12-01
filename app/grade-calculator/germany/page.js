@@ -8,6 +8,15 @@ export const metadata = {
     'Berechne deinen Notendurchschnitt (Schule, Uni, Abitur) mit unserem kostenlosen Rechner. Einfache Eingabe von Noten und Gewichtung.',
   alternates: {
     canonical: 'https://calculatecgpa.com/grade-calculator/germany',
+    languages: {
+      en: 'https://calculatecgpa.com/',
+      'en-US': 'https://calculatecgpa.com/grade-calculator/us',
+      'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
+      'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
+      'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+      'de-DE': 'https://calculatecgpa.com/grade-calculator/germany',
+      'x-default': 'https://calculatecgpa.com/',
+    },
   },
 };
 
