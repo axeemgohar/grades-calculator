@@ -213,16 +213,19 @@ export default function BlooketPackSimulator() {
           role="list"
           aria-label="Available blook packs"
         >
-          {packsData.packs.map((pack, index) => (
-            <PackCard
-              key={pack.packId}
-              pack={pack}
-              coins={coins}
-              onPackClick={handlePackClick}
-              packIndex={index}
-              disabled={isPending}
-            />
-          ))}
+          {packsData.packs.map(
+            (pack, index) =>
+              index > 0 && (
+                <PackCard
+                  key={pack.packId}
+                  pack={pack}
+                  coins={coins}
+                  onPackClick={handlePackClick}
+                  packIndex={index}
+                  disabled={isPending}
+                />
+              )
+          )}
         </section>
 
         {/* Footer Info */}
