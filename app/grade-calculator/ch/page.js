@@ -1,11 +1,11 @@
 import RelatedLinks from '@/utils/RelatedLinks';
-import SwissGradeCalculator from './components/SwissGradeCalculator';
-import CHContent from './components/SwissContent';
+import SwitzerlandCalculator from './components/SwissGradeCalculator';
+import SwitzerlandContent from './components/SwissContent';
 
 export const metadata = {
-  title: 'Einfacher Notenrechner Schweiz',
+  title: 'Einfache Notenrechner Schweiz',
   description:
-    'Berechne Deine gewichtete Schweizer Note präzise mit ECTS-Punkten. Finde Dein Prädikat (Magna Cum Laude) und vergleiche es mit dem US GPA (4.0). Sofort & kostenlos!',
+    'Berechne deinen Notendurchschnitt oder wandle Punkte in Noten um (Schweizer System 1-6). Kostenlos, einfach und präzise.',
   alternates: {
     canonical: 'https://calculatecgpa.com/grade-calculator/ch',
     languages: {
@@ -27,19 +27,20 @@ const USA = () => {
           Schweiz Notenrechner
         </h1>
         <h2 className="text-lg md:text-xl font-bold text-slate-800 mb-1">
-          Berechne Deine gewichtete Note (1.0 bis 6.0 Skala)
+          Durchschnitt oder Prüfung
         </h2>
         <p className="text-slate-600 mb-6">
-          Trage Deine Noten und ECTS-Punkte ein.
+          Wähle zwischen Notendurchschnitt und Punkterechner.
         </p>
 
-        <SwissGradeCalculator />
+        {/* <SwissGradeCalculator /> */}
+        <SwitzerlandCalculator />
       </section>
       <RelatedLinks />
 
       {/* Info Section */}
       <div className="bg-white mt-8">
-        <CHContent />
+        <SwitzerlandContent />
       </div>
     </div>
   );

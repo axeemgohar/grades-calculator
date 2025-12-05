@@ -1,117 +1,74 @@
 import { Button } from '@/components/ui/button';
 import { getSwissGradeDescription } from '@/lib/calculations/swiss-grade';
-import { Percent, RotateCcw } from 'lucide-react';
-import Link from 'next/link';
 
-// Helper function to map the average grade to a formal Swiss classification/Prädikat
-const getSwissClassification = (averageGrade) => {
-  const grade = parseFloat(averageGrade);
+import { RotateCcw } from 'lucide-react';
 
-  // Note: Swiss classifications can vary widely between universities (e.g., ETH, Uni Zürich, etc.)
-  // These are standard representations based on the 1.0-6.0 scale.
-  if (grade >= 5.5) {
-    return 'Mit Auszeichnung (Summa Cum Laude)'; // With Distinction
-  }
-  if (grade >= 5.0) {
-    return 'Sehr Gut (Magna Cum Laude)'; // Very Good
-  }
-  if (grade >= 4.5) {
-    return 'Gut (Cum Laude)'; // Good
-  }
-  if (grade >= 4.0) {
-    return 'Bestanden (Genügend)'; // Passed (Sufficient) - The standard pass mark
-  }
-
-  return 'Nicht Bestanden (Ungenügend)'; // Failed (Insufficient)
-};
-
-const DisplayResultCH = ({ gpa, onRecalculate }) => {
-  const totalCourses = gpa.totalCourses || 0;
-  const swissDescription = getSwissGradeDescription(gpa.score);
-  const honoursClass = getSwissClassification(gpa.score);
+const DisplayResultSwitzerland = ({ result, onRecalculate }) => {
+  const description = getSwissGradeDescription(result.score);
+  const scoreString = result.score;
 
   return (
     <>
-      <output
-        id="CH_Grade_calculated"
-        className="mt-8 p-6 bg-indigo-50 border border-indigo-300 rounded-lg block"
-      >
-        <div className="grid md:grid-cols-3 gap-6 items-start">
-          {/* Main Grade Score Section - Left Column */}
-          <div className="col-span-1 max-md:col-span-2 text-center md:text-left ">
-            <h3 className="text-xl md:text-2xl font-bold text-indigo-900 mb-2">
-              Ihr Durchschnittsnote: {/* Your Average Grade: */}
-            </h3>
-            <div
-              className={`text-5xl md:text-6xl font-extrabold text-indigo-700 leading-tight`}
-            >
-              {gpa.score}
-            </div>
-            <div className="text-sm text-gray-800 mt-1">
-              Note (1.0 bis 6.0 Skala) {/* Grade (1.0 to 6.0 Scale) */}
-            </div>
-          </div>
+      <output className="mt-8 block bg-white border-2 border-indigo-100 rounded-xl overflow-hidden shadow-sm">
+        {/* Header Color Bar */}
+        <div className="h-2 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
 
-          {/* Detailed Breakdown - Right Columns (2/3 width on md) */}
-          <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 border-l-0 md:border-l border-indigo-200 pr-0 md:pl-6">
-            {/* Performance Level Card */}
-            <div className="bg-white p-4 rounded-md shadow-sm ">
-              <p className="text-sm font-semibold text-slate-800 mb-1">
-                Leistungsniveau: {/* Performance Level: */}
-              </p>
-              <span className="font-bold text-indigo-500 text-lg sm:text-xl leading-snug">
-                {swissDescription.split('(')[0].trim()}{' '}
-              </span>
-              {/* Optional: Show detailed parenthetical if it exists */}
-              {swissDescription.includes('(') && (
-                <p className="text-xs text-gray-800 mt-1">
-                  ({swissDescription.split('(')[1]})
+        <div className="p-6 md:p-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            {/* Left Side: The Grade */}
+            <div className="text-center md:text-left">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-indigo-400 mb-2">
+                {result.type === 'average'
+                  ? 'Dein Notendurchschnitt'
+                  : 'Deine Berechnete Note'}
+              </h3>
+              <div className="flex items-baseline justify-center md:justify-start gap-2">
+                <span className="text-6xl font-extrabold text-slate-800 tracking-tight">
+                  {scoreString}
+                </span>
+                <span className="text-lg font-medium text-slate-400">/ 6</span>
+              </div>
+            </div>
+
+            {/* Right Side: Context */}
+            <div className="w-full md:w-auto min-w-[200px] space-y-4">
+              <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-100">
+                <p className="text-xs font-semibold text-indigo-400 uppercase mb-1">
+                  Bewertung
                 </p>
+                <p className="text-2xl font-bold text-indigo-700">
+                  {description}
+                </p>
+              </div>
+
+              {result.type === 'points' && (
+                <div className="flex justify-between items-center text-sm font-medium text-slate-600 px-1">
+                  <span>Erreicht:</span>
+                  <span className="text-slate-900">{result.percentage}%</span>
+                </div>
               )}
-            </div>
 
-            {/* Classification Card */}
-            <div className="bg-white p-4 rounded-md shadow-sm">
-              <p className="text-sm font-semibold text-slate-800 mb-1">
-                Prädikat/Klassifikation: {/* Classification/Predicate: */}
-              </p>
-              <span className="font-bold text-indigo-500 text-lg sm:text-xl leading-snug">
-                {honoursClass}
-              </span>
-            </div>
-
-            {/* Total Courses Card */}
-            <div className="sm:col-span-2 bg-white p-4 rounded-md shadow-sm">
-              <p className="text-sm font-semibold text-slate-800 mb-1">
-                Berechnete Kurse: {/* Total Courses Calculated: */}
-              </p>
-              <span className="font-bold text-indigo-500 text-xl sm:text-2xl">
-                {totalCourses}
-              </span>
+              {result.type === 'average' && (
+                <div className="flex justify-between items-center text-sm font-medium text-slate-600 px-1">
+                  <span>Anzahl Noten:</span>
+                  <span className="text-slate-900">{result.count}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </output>
 
-      {/* Recalculate Button */}
-      <div className="text-center flex mt-6 sm:gap-6 justify-center max-sm:flex-col gap-4 ">
+      <div className="text-center mt-8">
         <Button
-          className="!px-12 h-10 bg-indigo-600 hover:bg-indigo-700 text-white shadow-md transition-all duration-200 ease-in-out"
+          className="px-8 h-12 text-base shadow-lg hover:shadow-xl transition-all"
           onClick={onRecalculate}
         >
-          <RotateCcw className="mr-2" size={18} strokeWidth={2.5} />
-          Note neu berechnen {/* Recalculate Grade */}
+          <RotateCcw className="mr-2 w-5 h-5" />
+          Neue Berechnung starten
         </Button>
-        <Link
-          prefetch={false}
-          href="/grade-calculator/cgpa-percentage"
-          className=" !px-12 h-10 bg-white text-indigo-600 !shadow-md border border-indigo-400 hover:bg-indigo-50 rounded-sm flex items-center justify-center gap-2"
-        >
-          In Prozent umrechnen {/* Convert to Percentage */}
-          <Percent size={20} strokeWidth={2} />
-        </Link>
       </div>
     </>
   );
 };
-export default DisplayResultCH;
+export default DisplayResultSwitzerland;
