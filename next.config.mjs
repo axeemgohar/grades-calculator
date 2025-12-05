@@ -6,15 +6,15 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/ads.txt',
-        destination: 'https://srv.adstxtmanager.com/19390/calculatecgpa.com',
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/ads.txt',
+  //       destination: 'https://srv.adstxtmanager.com/19390/calculatecgpa.com',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
 
 export default withBundleAnalyzer(nextConfig);
