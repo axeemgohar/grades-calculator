@@ -13,3 +13,4 @@ smaato.com, 1100056344, RESELLER, 07bcf65f187117b4
 smartadserver.com, 4926, RESELLER, 060d053dcf45cbf3
 opera.com, pub10014056052800, RESELLER, 55a0c5fd61378de3
 axonix.com, 59143, RESELLER, bc385f2b4a87b721
+google.com, pub-4387257264739398, DIRECT, f08c47fec0942fa0

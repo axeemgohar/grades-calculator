@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { getSwissGradeDescription } from '@/lib/calculations/swiss-grade';
-
 import { RotateCcw } from 'lucide-react';
 
 const DisplayResultSwitzerland = ({ result, onRecalculate }) => {
