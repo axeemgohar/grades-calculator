@@ -5,38 +5,118 @@ import { useEffect, useRef } from 'react';
 
 const EzoicScripts = () => {
   const pathname = usePathname();
-  const retryCountRef = useRef(0);
-  const maxRetries = 30; // 30 attempts = 3 seconds max wait
+  const isInitialLoad = useRef(true);
 
   useEffect(() => {
-    // Only start checking after a slight delay to let scripts load
-    const initialDelay = setTimeout(() => {
-      const intervalId = setInterval(() => {
-        try {
-          if (window.ezstandalone?.cmd) {
-            window.ezstandalone.cmd.push(function () {
-              ezstandalone.showAds();
-            });
+    const triggerEzoicAds = () => {
+      try {
+        if (window.ezstandalone?.cmd) {
+          window.ezstandalone.cmd.push(function () {
+            ezstandalone.showAds();
+          });
+          return true;
+        }
+        return false;
+      } catch (err) {
+        console.error('Error initializing Ezoic ads:', err);
+        return false;
+      }
+    };
+
+    // On initial page load, wait a bit for scripts to load
+    if (isInitialLoad.current) {
+      isInitialLoad.current = false;
+
+      const initialDelay = setTimeout(() => {
+        let retryCount = 0;
+        const maxRetries = 30;
+
+        const intervalId = setInterval(() => {
+          const success = triggerEzoicAds();
+          retryCount++;
+
+          if (success || retryCount >= maxRetries) {
             clearInterval(intervalId);
-            retryCountRef.current = 0;
-          } else {
-            retryCountRef.current++;
-            // Stop trying after max retries to prevent infinite polling
-            if (retryCountRef.current >= maxRetries) {
+            if (!success && retryCount >= maxRetries) {
               console.warn('Ezoic ads failed to load after maximum retries');
-              clearInterval(intervalId);
             }
           }
-        } catch (err) {
-          console.error('Error initializing Ezoic ads:', err);
+        }, 100);
+
+        return () => clearInterval(intervalId);
+      }, 500);
+
+      return () => clearTimeout(initialDelay);
+    } else {
+      // On route changes, ezstandalone is already loaded, trigger immediately
+      // Try a few times in case there's a brief delay
+      let attempts = 0;
+      const maxAttempts = 10;
+
+      const intervalId = setInterval(() => {
+        const success = triggerEzoicAds();
+        attempts++;
+
+        if (success || attempts >= maxAttempts) {
           clearInterval(intervalId);
         }
-      }, 100); // Keep 100ms but with retry limit
+      }, 100);
 
       return () => clearInterval(intervalId);
-    }, 500); // Wait 500ms before starting to check
+    }
+  }, [pathname]);
 
-    return () => clearTimeout(initialDelay);
+  // Monitor for empty ad placeholders and retry loading
+  useEffect(() => {
+    const checkEmptyPlaceholders = () => {
+      // Target Ezoic placeholders: <div id="ezoic-pub-ad-placeholder-123"></div>
+      const placeholders = document.querySelectorAll(
+        '[id^="ezoic-pub-ad-placeholder-"]'
+      );
+
+      let hasEmptyPlaceholders = false;
+
+      placeholders.forEach((placeholder) => {
+        // Check if placeholder has no child elements (empty)
+        // Ezoic injects content as child elements when ads load
+        const isEmpty = placeholder.children.length === 0;
+
+        if (isEmpty) {
+          hasEmptyPlaceholders = true;
+        }
+      });
+
+      return hasEmptyPlaceholders;
+    };
+
+    // Start checking after ads should have loaded (3 seconds after route change)
+    const checkTimer = setTimeout(() => {
+      const retryInterval = setInterval(() => {
+        const hasEmpty = checkEmptyPlaceholders();
+
+        if (hasEmpty && window.ezstandalone?.cmd) {
+          console.log('Empty Ezoic placeholders detected, retrying...');
+          window.ezstandalone.cmd.push(function () {
+            ezstandalone.showAds();
+          });
+        } else if (!hasEmpty) {
+          // All placeholders filled, stop checking
+          clearInterval(retryInterval);
+        }
+      }, 2000); // Check every 2 seconds
+
+      // Stop checking after 20 seconds total
+      const stopTimer = setTimeout(() => {
+        clearInterval(retryInterval);
+      }, 20000);
+
+      return () => {
+        clearInterval(retryInterval);
+        clearTimeout(stopTimer);
+      };
+    }, 3000);
+
+    return () => clearTimeout(checkTimer);
   }, [pathname]);
 
   return (
