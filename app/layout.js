@@ -5,6 +5,8 @@ import { Roboto } from 'next/font/google';
 import Footer from '@/components/ui/Footer';
 import { GoogleTagManager } from '@next/third-parties/google';
 import EzoicScripts from '@/ezoic/EzoicInit';
+import PartyTownConfig from '@/lib/partytown/PartyTownConfig';
+import EzoicScriptsPartytown from '@/lib/partytown/EzoicScriptsPartytown';
 
 const robotoSans = Roboto({
   variable: '--font-roboto',
@@ -42,7 +44,10 @@ export default function RootLayout({ children }) {
 
         <Toaster position="top-right" />
         <GoogleTagManager gtmId="GTM-MPPN39V" />
-        <EzoicScripts />
+        {/* 
+        <EzoicScripts /> */}
+        <PartyTownConfig />
+        <EzoicScriptsPartytown />
         <div className="max-h-28 h-28 text-center max-w-5xl mx-auto overflow-hidden">
           <div id="ezoic-pub-ad-placeholder-123"></div>
         </div>
