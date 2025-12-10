@@ -14,6 +14,7 @@ import {
 import { toast } from 'sonner';
 import DisplayResultSwitzerland from './DisplayResult';
 import useElementSize from '@/utils/useElementSize';
+import Script from 'next/script';
 
 const initialList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
@@ -105,6 +106,12 @@ const SwitzerlandCalculator = () => {
 
   return (
     <>
+      <Script
+        src="https://#"
+        onError={() => {
+          document.documentElement.lang = 'de-CH';
+        }}
+      />
       {/* Mode Switcher Buttons */}
       <div className="flex p-1 bg-slate-100 rounded-lg mb-6 border border-slate-200">
         <button

@@ -1,13 +1,13 @@
-import GermanyContent from './components/GermanyContent';
-import GermanyGradeCalculator from './components/GermanyGradeCalculator';
-import RelatedLinks from '@/utils/RelatedLinks'; // Assuming you reuse this
+import NetherlandsCalculator from './components/NetherlandsCalculator';
+import RelatedLinks from '@/utils/RelatedLinks';
+import NetherlandsContent from './components/NetherlandsContent';
 
 export const metadata = {
-  title: 'Einfach Notendurchschnitt Rechner',
+  title: 'Gemiddelde Cijfer Berekenen - Eenvoudige Calculator',
   description:
-    'Berechne deinen Notendurchschnitt (Schule, Uni, Abitur) mit unserem kostenlosen Rechner. Einfache Eingabe von Noten und Gewichtung.',
+    'Bereken eenvoudig je gewogen gemiddelde cijfer (1-10 schaal). Handig voor middelbare school, MBO, HBO en Universiteit. Voeg weging toe en zie direct je resultaat.',
   alternates: {
-    canonical: 'https://calculatecgpa.com/grade-calculator/germany',
+    canonical: 'https://calculatecgpa.com/grade-calculator/netherlands',
     languages: {
       en: 'https://calculatecgpa.com/',
       'en-US': 'https://calculatecgpa.com/grade-calculator/us',
@@ -21,31 +21,31 @@ export const metadata = {
   },
 };
 
-const Germany = () => {
+const Netherlands = () => {
   return (
     <div className="lg:col-span-2">
       <section className="bg-white rounded-lg md:shadow-xs p-0 md:p-8 md:border">
-        {/* German Title */}
+        {/* Title styled with Blue gradient for Netherlands theme */}
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 md:mb-6 flex items-center bg-gradient-to-b from-indigo-500 to-indigo-700 bg-clip-text text-transparent">
-          Notendurchschnitt Rechner
+          Gemiddelde cijfer berekenen
         </h1>
-        {/* German Subtitle */}
         <h2 className="text-lg md:text-xl font-bold text-slate-800 mb-1">
-          Fächer & Noten eingeben
+          Vul je cijfers in
         </h2>
         <p className="text-slate-600 mb-6">
-          Trage deine Fächer, Noten (1-6) und die Gewichtung ein.
+          Bereken snel je gewogen gemiddelde. Voeg cijfers toe en geef de weging
+          op.
         </p>
 
-        <GermanyGradeCalculator />
+        <NetherlandsCalculator />
       </section>
 
       <RelatedLinks />
 
       <div className="bg-white mt-8">
-        <GermanyContent />
+        <NetherlandsContent />
       </div>
     </div>
   );
 };
-export default Germany;
+export default Netherlands;

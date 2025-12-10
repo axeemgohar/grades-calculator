@@ -14,6 +14,8 @@ export const metadata = {
       'en-GB': 'https://calculatecgpa.com/grade-calculator/uk',
       'en-NZ': 'https://calculatecgpa.com/grade-calculator/nz',
       'de-CH': 'https://calculatecgpa.com/grade-calculator/ch',
+      'de-DE': 'https://calculatecgpa.com/grade-calculator/germany',
+      'nl-NL': 'https://calculatecgpa.com/grade-calculator/nl',
       'x-default': 'https://calculatecgpa.com/',
     },
   },
