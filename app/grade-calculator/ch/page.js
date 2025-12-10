@@ -3,7 +3,7 @@ import SwitzerlandCalculator from './components/SwissGradeCalculator';
 import SwitzerlandContent from './components/SwissContent';
 
 export const metadata = {
-  title: 'Einfache Notenrechner Schweiz',
+  title: 'Schweizer Notenrechner',
   description:
     'Berechne deinen Notendurchschnitt oder wandle Punkte in Noten um (Schweizer System 1-6). Kostenlos, einfach und präzise.',
   alternates: {

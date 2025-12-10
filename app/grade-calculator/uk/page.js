@@ -4,7 +4,7 @@ import UKDCCalculator from './components/UKGPACalculator';
 import UKDegreeCalculatorSchema from '@/JSON-LD Schemas/UKDCCalculatorSchema';
 
 export const metadata = {
-  title: 'Simple UK Degree Calculator',
+  title: 'Simple UK Degree Classification Calculator',
   description:
     'Calculate your UK degree classification instantly. Convert marks to First Class, 2:1, 2:2, or Third Class honors. Free calculator for UK students.',
   alternates: {

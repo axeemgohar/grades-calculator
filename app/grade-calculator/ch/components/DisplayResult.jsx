@@ -8,7 +8,10 @@ const DisplayResultSwitzerland = ({ result, onRecalculate }) => {
 
   return (
     <>
-      <output className="mt-8 block bg-white border-2 border-indigo-100 rounded-xl overflow-hidden shadow-sm">
+      <output
+        id="CH_Grade_calculated"
+        className="mt-8 block bg-white border-2 border-indigo-100 rounded-xl overflow-hidden shadow-sm"
+      >
         {/* Header Color Bar */}
         <div className="h-2 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
 

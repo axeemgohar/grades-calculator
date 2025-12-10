@@ -4,7 +4,7 @@ import RelatedLinks from '@/utils/RelatedLinks';
 import NZGPACalculatorSchema from '@/JSON-LD Schemas/NZGPACalculatorSchema';
 
 export const metadata = {
-  title: 'Simple NZ GPA Calculator',
+  title: 'NZ GPA Calculator',
   description:
     'Calculate your weighted GPA on the New Zealand 9.0 scale. Essential tool for students planning Honours, Masters, or checking scholarship eligibility. Accurate and easy to use!',
   alternates: {
