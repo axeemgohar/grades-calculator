@@ -7,7 +7,7 @@ export const metadata = {
   description:
     'Bereken eenvoudig je gewogen gemiddelde cijfer (1-10 schaal). Handig voor middelbare school, MBO, HBO en Universiteit. Voeg weging toe en zie direct je resultaat.',
   alternates: {
-    canonical: 'https://calculatecgpa.com/grade-calculator/netherlands',
+    canonical: 'https://calculatecgpa.com/grade-calculator/nl',
     languages: {
       en: 'https://calculatecgpa.com/',
       'en-US': 'https://calculatecgpa.com/grade-calculator/us',
