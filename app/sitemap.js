@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      url: 'https://www.calculatecgpa.com',
+      url: 'https://calculatecgpa.com',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
@@ -18,7 +18,7 @@ export default function sitemap() {
       },
     },
     {
-      url: 'https://www.calculatecgpa.com/grade-calculator/us',
+      url: 'https://calculatecgpa.com/grade-calculator/us',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -35,7 +35,7 @@ export default function sitemap() {
       },
     },
     {
-      url: 'https://www.calculatecgpa.com/grade-calculator/uk',
+      url: 'https://calculatecgpa.com/grade-calculator/uk',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -52,7 +52,7 @@ export default function sitemap() {
       },
     },
     {
-      url: 'https://www.calculatecgpa.com/grade-calculator/nz',
+      url: 'https://calculatecgpa.com/grade-calculator/nz',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -69,7 +69,7 @@ export default function sitemap() {
       },
     },
     {
-      url: 'https://www.calculatecgpa.com/grade-calculator/ch',
+      url: 'https://calculatecgpa.com/grade-calculator/ch',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -86,7 +86,7 @@ export default function sitemap() {
       },
     },
     {
-      url: 'https://www.calculatecgpa.com/grade-calculator/nl',
+      url: 'https://calculatecgpa.com/grade-calculator/nl',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -103,7 +103,7 @@ export default function sitemap() {
       },
     },
     {
-      url: 'https://www.calculatecgpa.com/grade-calculator/germany',
+      url: 'https://calculatecgpa.com/grade-calculator/germany',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -120,25 +120,25 @@ export default function sitemap() {
       },
     },
     {
-      url: 'https://www.calculatecgpa.com/blooket-simulator',
+      url: 'https://calculatecgpa.com/blooket-simulator',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://www.calculatecgpa.com/blooket/all-blooks',
+      url: 'https://calculatecgpa.com/blooket/all-blooks',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://www.calculatecgpa.com/blooket/blooket-pack-calculator',
+      url: 'https://calculatecgpa.com/blooket/blooket-pack-calculator',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://www.calculatecgpa.com/grade-calculator/cgpa-percentage',
+      url: 'https://calculatecgpa.com/grade-calculator/cgpa-percentage',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -150,19 +150,19 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
-      url: 'https://www.calculatecgpa.com/about-us',
+      url: 'https://calculatecgpa.com/about-us',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
-      url: 'https://www.calculatecgpa.com/contact-us',
+      url: 'https://calculatecgpa.com/contact-us',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
-      url: 'https://www.calculatecgpa.com/privacy-policy',
+      url: 'https://calculatecgpa.com/privacy-policy',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
