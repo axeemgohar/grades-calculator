@@ -1,4 +1,3 @@
-import EpsilonAd from '@/lib/epsilon';
 import {
   BookOpen,
   CircleQuestionMark,
@@ -474,7 +473,6 @@ const CGPAContent = () => {
           academic future. It takes less than 2 minutes!
         </p>
       </div>
-      <EpsilonAd siteId="243250" />
     </div>
   );
 };
