@@ -12,6 +12,7 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 import CountrySelector from '../../us/components/CGPAGuider';
 import useLocationBasedTerms from '@/utils/useLocationBasedTerms';
+import EpsilonAd from '@/lib/epsilon';
 
 const semesterList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
