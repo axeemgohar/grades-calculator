@@ -186,7 +186,7 @@ export const countryData = {
   },
 
   Pakistan: {
-    code: 'PK1',
+    code: 'PK',
     name: 'Pakistan',
     terms: {
       semesterGPA: 'Semester GPA',
