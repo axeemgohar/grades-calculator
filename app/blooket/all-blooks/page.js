@@ -25,38 +25,8 @@ export default function AllBlooksUnlocked() {
         </p>
 
         {packsData.packs.map((pack, index) => (
-          <div key={pack.packId}>
-            <PackSection key={pack.packId} pack={pack} />
-            {index === 3 && (
-              <div>
-                <div className="max-lg:hidden mb-8">
-                  <div id="ezoic-pub-ad-placeholder-104"></div>
-                </div>
-
-                {/* Mobile Version */}
-                <div className="lg:hidden mb-8">
-                  <div id="ezoic-pub-ad-placeholder-117"></div>
-                </div>
-              </div>
-            )}
-            {index === 7 && (
-              <div>
-                <div className="max-lg:hidden mb-8">
-                  <div id="ezoic-pub-ad-placeholder-118"></div>
-                </div>
-
-                {/* Mobile Version */}
-                <div className="lg:hidden mb-8">
-                  <div id="ezoic-pub-ad-placeholder-121"></div>
-                </div>
-              </div>
-            )}
-          </div>
+          <PackSection key={pack.packId} pack={pack} />
         ))}
-        {/* Desktop Version */}
-        <div className="max-lg:hidden">
-          <div id="ezoic-pub-ad-placeholder-122"></div>
-        </div>
       </section>
     </div>
   );

@@ -12,7 +12,6 @@ import Lottie from 'react-lottie-player/dist/LottiePlayerLight';
 import printerLoader from '@/public/assets/loader/Printer-Loader.json';
 import CountrySelector from '../../us/components/CGPAGuider';
 import useLocationBasedTerms from '@/utils/useLocationBasedTerms';
-import EpsilonAd from '@/lib/epsilon';
 
 const semesterList = Array.from({ length: 3 }, (_, i) => ({
   id: i + 1,
@@ -124,17 +123,6 @@ const CGPACalculator = () => {
     <>
       {!cgpa.score && !loader ? (
         <>
-          {/* Location Detection Notice */}
-          {isLocationDetected && selectedCountry && (
-            <div className="mb-4 rounded-lg border border-green-200 bg-green-50 p-3 flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-green-600 shrink-0" />
-              <p className="text-sm text-green-800">
-                Calculation mode selected for the grading system of{' '}
-                <span className="font-bold">{selectedCountry}</span>.
-              </p>
-            </div>
-          )}
-
           <CountrySelector
             selectedCountry={selectedCountry}
             onCountrySelect={handleCountrySelect}

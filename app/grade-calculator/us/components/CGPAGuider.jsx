@@ -45,7 +45,7 @@ const CountrySelector = ({
     onCountrySelect(newSelection);
     setOpen(false);
   };
-
+  console.log('Current Example in CountrySelector:', selectedCountry);
   return (
     <div>
       <div className="w-80 ms-auto">
@@ -111,47 +111,48 @@ const CountrySelector = ({
       </div>
 
       {/* Example Display */}
-      {showExample && currentExample && selectedCountry && (
-        <div className="rounded-sm border border-purple-300 bg-purple-50 p-4 mb-4">
-          <div className="flex items-center gap-2 mb-4">
-            <Info strokeWidth={1.5} className="text-purple-700" />
-            <h4 className="font-medium text-purple-900 text-base">
-              Usage example for {selectedCountry}:
-            </h4>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300">
-              <span className="text-sm text-gray-700 ">
-                {currentExample.semester1.GPATerm}:{' '}
-                <span className="font-semibold text-gray-600">
-                  {currentExample.semester1.gpa}
-                </span>
+      <div className="rounded-sm border border-purple-300 bg-purple-50 p-4 mb-4">
+        <div className="flex items-center gap-2 mb-4">
+          <Info strokeWidth={1.5} className="text-purple-700" />
+          <h4 className="font-medium text-purple-900 text-base">
+            {selectedCountry
+              ? 'Usage example for ' + selectedCountry
+              : 'Usage example:'}
+          </h4>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300">
+            <span className="text-sm text-gray-700 ">
+              {currentExample?.semester1.GPATerm ?? 'Semester 1 GPA'}:{' '}
+              <span className="font-semibold text-gray-600">
+                {currentExample?.semester1.gpa ?? '3.75'}
               </span>
-              <span className="text-gray-600 text-sm ">
-                {currentExample.semester1.creditsTerm}:{' '}
-                <span className="font-semibold text-gray-600">
-                  {currentExample.semester1.credits}
-                </span>
+            </span>
+            <span className="text-gray-600 text-sm ">
+              {currentExample?.semester1.creditsTerm ?? 'Credits'}:{' '}
+              <span className="font-semibold text-gray-600">
+                {currentExample?.semester1.credits ?? '15'}
               </span>
-            </div>
-            <div className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300">
-              <span className="text-sm text-gray-700 ">
-                {currentExample.semester2.GPATerm}:{' '}
-                <span className="font-semibold text-gray-600">
-                  {currentExample.semester2.gpa}
-                </span>
+            </span>
+          </div>
+          <div className="flex items-center justify-between bg-white/70 rounded-md px-3 py-3 border border-purple-300">
+            <span className="text-sm text-gray-700 ">
+              {currentExample?.semester2.GPATerm ?? 'Semester 2 GPA'}:{' '}
+              <span className="font-semibold text-gray-600">
+                {currentExample?.semester2.gpa ?? '3.85'}
               </span>
-              <span className="text-gray-600 text-sm ">
-                {currentExample.semester2.creditsTerm}:{' '}
-                <span className="font-semibold text-gray-600">
-                  {currentExample.semester2.credits}
-                </span>
+            </span>
+            <span className="text-gray-600 text-sm ">
+              {currentExample?.semester2.creditsTerm ?? 'Credits'}:{' '}
+              <span className="font-semibold text-gray-600">
+                {currentExample?.semester2.credits ?? '18'}
               </span>
-            </div>
+            </span>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

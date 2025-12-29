@@ -58,8 +58,6 @@ const RelatedLinks = () => {
           </ul>
         </div>
       </div>
-
-      <div id="ezoic-pub-ad-placeholder-115"></div>
     </aside>
   );
 };

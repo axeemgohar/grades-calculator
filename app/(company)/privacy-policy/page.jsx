@@ -517,7 +517,7 @@ const PrivacyPolicy = () => {
           </p>
         </div>
       </section>
-      <section className="mb-10 ">
+      {/* <section className="mb-10 ">
         <div className="rounded-lg border-solid border-[1px] border-indigo-500/40 bg-indigo-300/10 px-10 py-8 text-gray-700 max-xl:px-8 max-lg:px-6 max-lg:py-6  max-md:px-4">
           <h2 className="mb-6 font-bold text-3xl max-xl:mb-5 max-xl:text-2xl max-lg:mb-4 max-sm:text-xl">
             Ezoic Services
@@ -604,7 +604,7 @@ const PrivacyPolicy = () => {
             .
           </p>
         </div>
-      </section>
+      </section> */}
       <section className="mb-10 ">
         <div className="rounded-lg border-solid border-[1px] border-indigo-500/40 bg-indigo-300/10 px-10 py-8 text-gray-700 max-xl:px-8 max-lg:px-6 max-lg:py-6  max-md:px-4">
           <h2 className="mb-6 font-bold text-3xl max-xl:mb-5 max-xl:text-2xl max-lg:mb-4 max-sm:text-xl">

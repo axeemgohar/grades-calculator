@@ -50,11 +50,6 @@ const BlooketLayout = ({ children }) => {
               </li>
             </ul>
           </div>
-          <div
-            id="ezoic-pub-ad-placeholder-114"
-            className="max-lg:hidden"
-          ></div>
-          <div id="ezoic-pub-ad-placeholder-115" className="lg:hidden"></div>
         </div>
       </aside>
     </div>

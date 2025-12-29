@@ -25,10 +25,6 @@ export default function BlooketCalculator() {
           blook!
         </p>
         <BlooketGuaranteeCalculator />
-        {/* Desktop Version */}
-        <div className="max-lg:hidden">
-          <div id="ezoic-pub-ad-placeholder-122"></div>
-        </div>
       </section>
     </div>
   );

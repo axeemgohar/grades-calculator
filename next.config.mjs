@@ -6,28 +6,28 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig = {
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Link',
-            value: '<https://www.ezojs.com>; rel=preconnect',
-          },
-        ],
-      },
-    ];
-  },
-  async redirects() {
-    return [
-      {
-        source: '/ads.txt',
-        destination: 'https://srv.adstxtmanager.com/19390/calculatecgpa.com',
-        permanent: true,
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/:path*',
+  //       headers: [
+  //         {
+  //           key: 'Link',
+  //           value: '<https://www.ezojs.com>; rel=preconnect',
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/ads.txt',
+  //       destination: 'https://srv.adstxtmanager.com/19390/calculatecgpa.com',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
 
 export default withBundleAnalyzer(nextConfig);

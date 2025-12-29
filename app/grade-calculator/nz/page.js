@@ -37,9 +37,7 @@ const USA = () => {
         <NZGPACalculator />
       </section>
       <RelatedLinks />
-      <div className="max-lg:hidden mb-8">
-        <div id="ezoic-pub-ad-placeholder-104"></div>
-      </div>
+
       {/* Info Section */}
       <div className="bg-white mt-8">
         <NZContent />
