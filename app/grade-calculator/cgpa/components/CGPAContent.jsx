@@ -2,7 +2,6 @@ import {
   BookOpen,
   CircleQuestionMark,
   Clipboard,
-  Globe,
   Search,
   Sun,
   Zap,

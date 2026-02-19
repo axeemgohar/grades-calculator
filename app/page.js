@@ -5,6 +5,7 @@ import CGPACalculator from './grade-calculator/cgpa/components/CGPACalculator';
 import Link from 'next/link';
 import { LinkIcon } from 'lucide-react';
 import CGPACalculatorSchema from '@/JSON-LD Schemas/CGPACalculatorSchema';
+import CVInterestForm from './grade-calculator/feedback/Cvinterestform';
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
 
           <CGPACalculator />
         </section>
+        <div className="bg-indigo-50 rounded-lg p-6 border border-indigo-200 mb-8">
+          <CVInterestForm />
+        </div>
         <RelatedLinks />
 
         {/* Info Section */}

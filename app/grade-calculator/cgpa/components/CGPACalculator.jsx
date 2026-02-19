@@ -68,7 +68,7 @@ const CGPACalculator = () => {
     setSemesters((prevSemesters) =>
       prevSemesters.map((semester) => {
         return semester.id === id ? { ...semester, [field]: value } : semester;
-      })
+      }),
     );
   };
 
@@ -92,7 +92,7 @@ const CGPACalculator = () => {
       totalSemesters: semesters.length,
       totalCredits: semesters.reduce(
         (acc, sem) => acc + (parseFloat(sem.credits) || 0),
-        0
+        0,
       ),
       CGPADescription: currentTerms.resultCGPA,
       semesterTerm: currentTerms.resultTotalSemesters,
@@ -164,7 +164,7 @@ const CGPACalculator = () => {
                         >
                           {currentTerms.placeholderGPA.replace(
                             '{{n}}',
-                            semester.id
+                            semester.id,
                           )}
                         </label>
                         <Input
@@ -176,7 +176,7 @@ const CGPACalculator = () => {
                           }
                           placeholder={currentTerms.placeholderGPA.replace(
                             '{{n}}',
-                            semester.id
+                            semester.id,
                           )}
                           step="0.01"
                           min="0"
@@ -190,7 +190,7 @@ const CGPACalculator = () => {
                         >
                           {currentTerms.placeholderCredits.replace(
                             '{{n}}',
-                            semester.id
+                            semester.id,
                           )}
                         </label>
                         <Input
@@ -199,14 +199,14 @@ const CGPACalculator = () => {
                             updateSemester(
                               semester.id,
                               'credits',
-                              e.target.value
+                              e.target.value,
                             )
                           }
                           id={'semester-credits-' + semester.id}
                           value={semester.credits}
                           placeholder={currentTerms.placeholderCredits.replace(
                             '{{n}}',
-                            semester.id
+                            semester.id,
                           )}
                           min="0"
                           step="1"
