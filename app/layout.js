@@ -39,6 +39,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="preconnect" href="https://www.ezojs.com" />
+      <link rel="dns-prefetch" href="https://www.ezojs.com" />
       <body className={`${robotoSans.variable} font-sans antialiased`}>
         <Header />
 

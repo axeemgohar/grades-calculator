@@ -28,6 +28,16 @@ const EzoicScripts = () => {
   return (
     <>
       <Script
+        id="zaraz-ezoic-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.ezstandalone = window.ezstandalone || {};
+              ezstandalone.cmd = ezstandalone.cmd || [];
+            `,
+        }}
+      />
+      <Script
         id="ezoic-privacy"
         src="https://the.gatekeeperconsent.com/cmp.min.js"
         data-cfasync="false"
