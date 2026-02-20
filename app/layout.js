@@ -45,6 +45,11 @@ export default function RootLayout({ children }) {
         <Toaster position="top-right" />
         <GoogleTagManager gtmId="GTM-MPPN39V" />
         <EzoicScripts />
+
+        <div className="max-h-32 h-28 text-center max-w-5xl mx-auto flex items-center justify-center overflow-hidden">
+          <div id="ezoic-pub-ad-placeholder-123"></div>
+        </div>
+
         <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6">
           {children}
         </main>
