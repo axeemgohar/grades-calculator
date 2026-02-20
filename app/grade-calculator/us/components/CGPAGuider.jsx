@@ -45,7 +45,7 @@ const CountrySelector = ({
     onCountrySelect(newSelection);
     setOpen(false);
   };
-  console.log('Current Example in CountrySelector:', selectedCountry);
+
   return (
     <div>
       <div className="w-80 ms-auto">
@@ -98,7 +98,7 @@ const CountrySelector = ({
                           'ml-auto h-4 w-4',
                           selectedCountry === country.name
                             ? 'opacity-100'
-                            : 'opacity-0'
+                            : 'opacity-0',
                         )}
                       />
                     </CommandItem>

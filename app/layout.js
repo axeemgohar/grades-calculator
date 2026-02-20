@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { Roboto } from 'next/font/google';
 import Footer from '@/components/ui/Footer';
 import { GoogleTagManager } from '@next/third-parties/google';
+import EzoicScripts from '@/ezoic/EzoicInit';
 
 const robotoSans = Roboto({
   variable: '--font-roboto',
@@ -43,7 +44,7 @@ export default function RootLayout({ children }) {
 
         <Toaster position="top-right" />
         <GoogleTagManager gtmId="GTM-MPPN39V" />
-
+        <EzoicScripts />
         <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6">
           {children}
         </main>
