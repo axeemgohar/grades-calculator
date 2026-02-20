@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
         <GoogleTagManager gtmId="GTM-MPPN39V" />
         <EzoicScripts />
 
-        <div className="max-h-32 h-28 text-center max-w-5xl mx-auto flex items-center justify-center overflow-hidden">
+        <div className="max-h-32 h-28 text-center max-w-5xl mx-auto overflow-hidden">
           <div id="ezoic-pub-ad-placeholder-123"></div>
         </div>
 
