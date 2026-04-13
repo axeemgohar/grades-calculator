@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect } from 'react';
 import { countryData } from '@/utils/countryData';
 
@@ -42,7 +43,9 @@ const useLocationBasedTerms = () => {
     } else {
       // Reset to detected country terms or defaults
       setCurrentTerms(
-        detectedCountry ? countryData[detectedCountry].terms : getDefaultTerms()
+        detectedCountry
+          ? countryData[detectedCountry].terms
+          : getDefaultTerms(),
       );
       setShowExample(false);
     }
@@ -82,7 +85,7 @@ function getDefaultTerms() {
 
 function getCountryNameByCode(code) {
   return Object.keys(countryData).find(
-    (country) => countryData[country].code === code
+    (country) => countryData[country].code === code,
   );
 }
 

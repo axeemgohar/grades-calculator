@@ -6,6 +6,10 @@ import Link from 'next/link';
 import { LinkIcon } from 'lucide-react';
 import CGPACalculatorSchema from '@/JSON-LD Schemas/CGPACalculatorSchema';
 import CVInterestForm from './grade-calculator/feedback/Cvinterestform';
+import ConditionalAdBanner, {
+  LandscapreResumeBanner,
+  MobileResumeBanner,
+} from '@/components/ui/ConditionalAdBanner';
 
 export default function Home() {
   return (
@@ -22,9 +26,12 @@ export default function Home() {
 
           <CGPACalculator />
         </section>
-        <div className="bg-indigo-50 rounded-lg p-6 border border-indigo-200 mb-8">
-          <CVInterestForm />
+
+        <LandscapreResumeBanner />
+        <div className="min-sm:hidden">
+          <MobileResumeBanner />
         </div>
+
         <RelatedLinks />
 
         {/* Info Section */}
@@ -86,6 +93,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          <ConditionalAdBanner />
         </div>
       </aside>
       <CGPACalculatorSchema />
