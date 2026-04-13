@@ -111,10 +111,10 @@ export const LandscapreResumeBanner = () => {
   const shouldHide = selectedCountry === 'Pakistan';
   return (
     <div
-      className="flex flex-col items-center gap-2 max-md:hidden"
-      style={{
-        display: shouldHide ? 'block' : 'none',
-      }}
+      className={`flex flex-col items-center gap-2 max-md:hidden ${shouldHide ? 'min-md:block' : 'max-sm:hidden'}`}
+      // style={{
+      //   display: shouldHide ? 'block' : 'none',
+      // }}
     >
       <a
         href="https://resumebuilder.calculatecgpa.com/"
