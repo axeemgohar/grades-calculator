@@ -84,7 +84,7 @@ export default function ConditionalAdBanner() {
               >
                 Get your professional internship CV for just
                 <br />
-                <span className="text-indigo-600">Rs. 150</span>
+                <span className="text-indigo-600">Rs. 100</span>
               </h2>
 
               <p className="text-sm text-slate-500 leading-relaxed mb-4">
@@ -109,9 +109,10 @@ export const LandscapreResumeBanner = () => {
   const { selectedCountry } = useLocationBasedTerms();
 
   const shouldHide = selectedCountry === 'Pakistan';
+  console.log(shouldHide);
   return (
     <div
-      className={`flex flex-col items-center gap-2 max-md:hidden ${shouldHide ? 'min-md:block' : 'max-sm:hidden'}`}
+      className={`flex flex-col items-center gap-2 max-md:hidden  ${shouldHide ? 'min-md:block' : 'hidden'}`}
       // style={{
       //   display: shouldHide ? 'block' : 'none',
       // }}
@@ -132,7 +133,7 @@ export const LandscapreResumeBanner = () => {
             style={{ fontSize: '17px' }}
           >
             Get your professional internship CV for just
-            <span className="text-indigo-600"> Rs. 150</span>
+            <span className="text-indigo-600"> Rs. 100</span>
           </p>
         </div>
 
@@ -168,10 +169,12 @@ export const MobileResumeBanner = () => {
           <div className="flex items-center gap-1.5 mb-1"></div>
           <p className="font-bold text-gray-800 leading-snug text-sm">
             Get Professional CV for an internship in just{' '}
-            <span className="text-indigo-600">Rs. 150</span>
+            <span className="text-indigo-600">Rs. 100</span>
           </p>
-          <p className="text-xs text-slate-400 mt-0.5">
-            4 Professional templates
+          <p className="text-xs mt-1 text-slate-500">
+            <span className="text-yellow-500 font-semibold">JAZZ</span>
+            <span className="text-red-500 font-semibold">CASH </span>
+            is Available
           </p>
         </div>
 
